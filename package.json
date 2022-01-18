@@ -1,0 +1,25 @@
+{
+  "name": "phisherman-docs",
+  "version": "1.0.0",
+  "description": "Phisherman is a centralised database of phishing and scam links. It is designed for use with Discord bots, allowing them to utilise the Phisherman API to cross-check urls against our known phishing links.",
+  "private": true,
+  "dependencies": {
+    "vuepress": "^2.0.0-beta.32"
+  },
+  "devDependencies": {},
+  "scripts": {
+   "docs:dev": "vuepress dev docs",
+   "docs:build": "vuepress build docs",
+   "fa:build": "node node_modules/vuepress-plugin-font-awesome/index.js"
+ },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PhishermanGG/docs.git"
+  },
+  "author": "Red Spider",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PhishermanGG/docs/issues"
+  },
+  "homepage": "https://github.com/PhishermanGG/docs#readme"
+}
