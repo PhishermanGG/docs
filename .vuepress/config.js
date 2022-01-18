@@ -48,7 +48,7 @@ module.exports = {
          {
             text: 'Integrations',
             collapsible: true,
-            children: ['/third-party/README.md', '/third-party/third-party-bots.md', '/third-party/api-wrappers.md'],
+            children: ['/third-party/public-bot-integration.md', '/third-party/third-party-bots.md', '/third-party/api-wrappers.md'],
          },
       ],
    },
