@@ -15,3 +15,17 @@ User Config -> API Key -> Your Bot -> Phisherman API
 :::tip
 An great example of how to set up Phisherman as a plugin can be found in the [Zeppelin docs](https://zeppelin.gg/docs/plugins/phisherman)
 :::
+
+## Checking Domains vs Domain Info
+To ensure best performance and reliability, you should only use the [Check a domain](/api/v2/check-a-domain.md) to validate if a user-posted link is a phish or not. This endpoint is powered by Cloudflare Workers and will ensure your bot gets the quickest response on a lookup.
+
+The [Domain Info](/api/v2/fetch-domain-info.md) endpoint should only be used to provide additional context or information to users, such as a domain info command.
+
+![Example domain info command](/images/domain_info_embed_example.png) 
+
+## Reporting Caught Phish
+With Phisherman integration you can choose report back when it detects phishing links in servers protected by your bot. 
+
+Reporting back caught phish is entirely optional and not required for normal usage but allows the end user to view the number of Phish they have caught in the [dashboard](https://phisherman.gg/home).
+
+For best performance we recommend public bots use the [Bulk Reporting](/api/v2/catching-a-phish.html#bulk-reporting) endpoint.
