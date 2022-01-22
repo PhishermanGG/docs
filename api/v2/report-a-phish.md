@@ -4,7 +4,7 @@
 v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
 :::
 
-When integrating the Phisherman checks with your Discord bot, you can optionally report back when it catches a phish in your server(s).
+Used to submit a new phish to Phisherman. Note that all reports are reviewed manually before any new domains are added to Phisherman.
 
 :lock: **Auth Token:** Required  
 :key: **API Permission Required:** `API.READ`  

@@ -3,7 +3,7 @@
 Developers of public bots may integrate Phisherman as a plugin to provide anti-phishing protection to their end users. This guide will provide information on the requirements for public bots.
 
 ## Authentication
-Each end-user will require their own API key, which they can obtain via a request in the Phisherman [Discord server](https://discord.gg/QwrpmTgvWy).
+Each end-user will require their own API key, which they can obtain via a request in the Phisherman [Discord server](https://discord.gg/QwrpmTgvWy). API keys are issued on a per-user basis, so users only require a single key which can be used for multiple servers.
 
 You will need to provide an option within your users config file for them to save their API key. Your bot should then pass this key with each API request.
 
@@ -29,3 +29,6 @@ With Phisherman integration you can choose report back when it detects phishing 
 Reporting back caught phish is entirely optional and not required for normal usage but allows the end user to view the number of Phish they have caught in the [dashboard](https://phisherman.gg/home).
 
 For best performance we recommend public bots use the [Bulk Reporting](/api/v2/catching-a-phish.html#bulk-reporting) endpoint.
+
+## Testing your integration
+For a list of (safe) domains you can use for functional testing, please see [Testing your integration](/guide/getting-started.html#testing-your-integration).
