@@ -51,12 +51,5 @@ module.exports = {
             children: ['/third-party/public-bot-integration.md', '/third-party/third-party-bots.md', '/third-party/api-wrappers.md'],
          },
       ],
-   },
-
-   thirdPartyComponents: {
-      fontAwesomeIcons: {
-         regular: ['address-card', 'file-audio'], // Regular font awesome icon keys here
-         solid: ['battery-quarter'] // Solid font awesome icon keys here
-      }
    }
 }

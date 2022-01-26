@@ -20,7 +20,10 @@ Phisherman is built with :heart: (and :coffee:) using:
 - [NGINX](https://www.nginx.com/)
 - [Cloudflare Workers](https://workers.cloudflare.com/)
 - [Cloudflare Workers KV](https://www.cloudflare.com/products/workers-kv/)
-- [PhishTank](https://www.phishtank.com/)
-- [URLScan.io](https://urlscan.io/)
 - [CertStream](https://certstream.calidog.io/)
 - [PyFunceble](https://github.com/PyFunceble/)
+
+### Phisherman also makes use of the following websites and API's:
+
+- [PhishTank](https://www.phishtank.com/)
+- [URLScan.io](https://urlscan.io/)
