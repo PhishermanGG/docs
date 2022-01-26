@@ -30,5 +30,20 @@ Reporting back caught phish is entirely optional and not required for normal usa
 
 For best performance we recommend public bots use the [Bulk Reporting](/api/v2/catching-a-phish.html#bulk-reporting) endpoint.
 
+## User Agent Header
+
+You should ensure you provide a valid [User Agent Header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/User-Agent) when making API calls.
+
+This header should be in the format of:
+
+```:no-line-numbers
+<bot-name> (<comment> / <developer Discord ID>)
+```
+
+### Example User Agent Header
+```:no-line-numbers
+User-Agent: Phisherman-Bot (+https://phisherman.gg / 188032859276181504)
+```
+
 ## Testing your integration
 For a list of (safe) domains you can use for functional testing, please see [Testing your integration](/guide/getting-started.html#testing-your-integration).
