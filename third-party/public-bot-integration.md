@@ -3,11 +3,11 @@
 Developers of public bots may integrate Phisherman as a plugin to provide anti-phishing protection to their end users. This guide will provide information on the requirements for public bots.
 
 ## Authentication
-Each end-user will require their own API key, which they can obtain via a request in the Phisherman [Discord server](https://discord.gg/QwrpmTgvWy). API keys are issued on a per-user basis, so users only require a single key which can be used for multiple servers.
+Each end-user will require their own API key, which they can obtain via a request in the Phisherman [Discord server](https://discord.gg/QwrpmTgvWy). This is to allow efficient abuse prevention, rate limiting, and usage tracking. API keys are issued on a per-user basis, so users only require a single key which can be used for multiple servers.
 
-You will need to provide an option within your users config file for them to save their API key. Your bot should then pass this key with each API request.
+You will need to provide an option within your users config for them to save their API key. Your bot should then pass this key with each API request.
 
-The flow for this should look like the following:
+An example request flow should look like the following:
 ```:no-line-numbers
 User Config -> API Key -> Your Bot -> Phisherman API
 ```
@@ -15,6 +15,14 @@ User Config -> API Key -> Your Bot -> Phisherman API
 :::tip
 An great example of how to set up Phisherman as a plugin can be found in the [Zeppelin docs](https://zeppelin.gg/docs/plugins/phisherman)
 :::
+
+## Validating Domains
+Before making any API requests, your bot should validate any domains to ensure that only valid domains are used in requests.
+
+An example regex to validate domains can be found below
+```js
+(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]
+```
 
 ## Checking Domains vs Domain Info
 To ensure best performance and reliability, you should only use the [Check a domain](/api/v2/check-a-domain.md) to validate if a user-posted link is a phish or not. This endpoint is powered by Cloudflare Workers and will ensure your bot gets the quickest response on a lookup.
