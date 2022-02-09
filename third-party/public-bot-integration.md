@@ -21,8 +21,9 @@ Before making any API requests, your bot should validate any domains to ensure t
 
 An example regex to validate domains can be found below
 ```js
-(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]
+/(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/g
 ```
+The above example was taken from [RegExr](https://regexr.com/3au3g)
 
 ## Checking Domains vs Domain Info
 To ensure best performance and reliability, you should only use the [Check a domain](/api/v2/check-a-domain.md) to validate if a user-posted link is a phish or not. This endpoint is powered by Cloudflare Workers and will ensure your bot gets the quickest response on a lookup.
