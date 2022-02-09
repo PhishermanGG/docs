@@ -2,6 +2,21 @@
 
 Developers of public bots may integrate Phisherman as a plugin to provide anti-phishing protection to their end users. This guide will provide information on the requirements for public bots.
 
+## Requirements
+If you are requesting access to use in a bot, it should meet one of the following criteria:
+
+A) Be a [Verified Bot](https://support.discord.com/hc/en-us/articles/360040720412-Bot-Verification-and-Data-Whitelisting)
+
+**OR**
+
+B) Be a Self-Hosted version of a popular or verified bot (Eg. [Zeppelin](https://zeppelin.gg/))
+
+**🚫  The following will not be eligible for access to Phisherman:**
+
+- iOS, Google Play Store or Kindle apps
+- College or University projects/assignments
+- Private bots for testing or development purposes only
+
 ## Authentication
 Each end-user will require their own API key, which they can obtain via a request in the Phisherman [Discord server](https://discord.gg/QwrpmTgvWy). This is to allow efficient abuse prevention, rate limiting, and usage tracking. API keys are issued on a per-user basis, so users only require a single key which can be used for multiple servers.
 
@@ -19,11 +34,11 @@ An great example of how to set up Phisherman as a plugin can be found in the [Ze
 ## Validating Domains
 Before making any API requests, your bot should validate any domains to ensure that only valid domains are used in requests.
 
-An example regex to validate domains can be found below
-```js
+An example regex from [RegExr](https://regexr.com/3au3g) to validate domains can be found below
+```js:no-v-pre
 /(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]/g
 ```
-The above example was taken from [RegExr](https://regexr.com/3au3g)
+Alternatively, you can use a package such as [is-valid-domain](https://www.npmjs.com/package/is-valid-domain)
 
 ## Checking Domains vs Domain Info
 To ensure best performance and reliability, you should only use the [Check a domain](/api/v2/check-a-domain.md) to validate if a user-posted link is a phish or not. This endpoint is powered by Cloudflare Workers and will ensure your bot gets the quickest response on a lookup.
@@ -55,4 +70,4 @@ User-Agent: Phisherman-Bot (+https://phisherman.gg / 188032859276181504)
 ```
 
 ## Testing your integration
-For a list of (safe) domains you can use for functional testing, please see [Testing your integration](/guide/getting-started.html#testing-your-integration).
+For a list of safe domains you can use for functional testing, please see [Testing your integration](/guide/getting-started.html#testing-your-integration).

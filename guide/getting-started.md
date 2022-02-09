@@ -26,7 +26,7 @@ The stable base URL for all Version 1 endpoints is:
 https://api.phisherman.gg/v1/
 ```
 
-### Requests
+## Requests
 Requests must be sent over HTTPS with any payload formatted in JSON. Depending on if a request required authentication you will also need to include your API token in the appropriate header.
 
 ### API Key
@@ -34,6 +34,16 @@ API keys provide a way to authenticate with the Phisherman API. They allow for s
 
 ### API Permissions
 Some API endpoints require additional permissions to be enabled for your account as well as an API token to be sent via headers. You can view your current API permissions on your [settings page](https://phisherman.gg/user/settings)
+
+### Rate Limit
+The Phisherman API rate limits requests in order to prevent abuse and overload of our services. All users can make up to **50 requests per 10 seconds** to our API.
+
+All applications should make reasonable attempts to avoid making invalid requests. For example:
+
+- **401** responses are avoided by providing a valid token in the authorization header when required and by stopping further requests after a token becomes invalid   
+- **403** responses are avoided by inspecting required permissions and by not making requests that are restricted by such permissions
+
+If you have a very large application that may exceed this limit on on a regular or sustained basis, please contact us via ModMail.
 
 ### HTTP response codes
 The status of a response can be determined from the HTTP status code.
@@ -59,13 +69,13 @@ The following domains can be used for testing:
 |Domain|Status|
 |---|---|
 |`suspicious.test.phisherman.gg`|Triggers as a suspicious domain|
-|`verified.test.phisherman.gg`|Triggers as a verified domain|
+|`verified.test.phisherman.gg`|Triggers as a verified, malicious domain|
 |`unknown.test.phisherman.gg`|Triggers as an unknown domain|
 
 
 ### Expected Responses
 
-#### Checking a domain
+#### Checking a domain (v2 API)
 <CodeGroup>
    <CodeGroupItem title="suspicious.test.phisherman.gg" active>
 
