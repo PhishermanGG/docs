@@ -1,20 +1,6 @@
----
-home: true
-title: Home
-heroImage: /images/hero.png
-actions:
-  - text: Get Started
-    link: /guide/getting-started.html
-    type: primary
-  - text: Discord Server
-    link: https://discord.gg/QwrpmTgvWy
-    type: secondary
-features:
-  - title: Simplicity First
-    details: Our quick and easy to understand API makes integrating it into your bot a breeze.
-  - title: Multi-Source
-    details: Phisherman ingests from multiple sources in order to ensure new domains are detected quickly.
-  - title: Fast & Reliable
-    details: Built utilising both Workers and Workers KV, aims to be as fast and reliable as possible.
-footer: Copyright © 2021-present phisherman.gg
----
+# Phisherman - Docs
+
+Repository for the Phisherman docs website which can be found at [docs.phisherman.gg](https://docs.phisherman.gg).
+
+## Contributing
+PRs are welcome if you wish to contribute towards improving the docs. All PRs should be submitted to the [develop](https://github.com/PhishermanGG/docs/tree/develop) branch.
