@@ -16,5 +16,5 @@ features:
     details: Phisherman ingests from multiple sources in order to ensure new domains are detected quickly.
   - title: Fast & Reliable
     details: Built utilising both Workers and Workers KV, aims to be as fast and reliable as possible.
-footer: Copyright © 2021-present phisherman.gg
+footer: Copyright © 2022 phisherman.gg
 ---

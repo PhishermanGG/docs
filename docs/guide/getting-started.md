@@ -51,14 +51,14 @@ The status of a response can be determined from the HTTP status code.
 |Code|Status|Description|
 |---|---|---|
 |200|OK|Request successful|
-|201|OK|Request successful|
-|204|OK|Request successful|
-|304|Not Modified|
-|400|Bad Request|Request was invalid|
-|401|Unauthorized|Request not authenticated|
-|403|Forbidden|User does not have permission|
-|429|Too many requests|Client is rate limited|
-|500|Internal Server Error|An error occured, please try again later|
+|201|Created|Request successful, resource was created|
+|202|Accepted|Request successful, resource was created or updated|
+|204|No Content|Request successful, no additional information to return|
+|400|Bad Request|Request was invalid of malformed|
+|401|Unauthorized|You did not supply valid authentication credentials|
+|403|Forbidden|You are not allowed to perform that action|
+|429|Too many requests|Your request exceeded the API rate limit|
+|500|Internal Server Error|Unable to perform the request due to server-side problems|
 
 ## Testing your integration
 
