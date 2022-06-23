@@ -87,5 +87,9 @@ print(data.decode("utf-8"))
 
 ### Example Response
 ```
-HTTP2/204
+HTTP2/201
+{
+	"success": true,
+	"message": ""
+}
 ```

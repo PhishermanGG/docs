@@ -19,3 +19,7 @@ Domain has not been verified as phishing or scam site, but is high probability o
 ::: danger Malicious
 Domain has been manually verified as being a phishing or scam site
 :::
+
+::: tip Unknown
+Phisherman has no information regarding this domain
+:::
