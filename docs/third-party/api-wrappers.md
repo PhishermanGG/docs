@@ -10,7 +10,8 @@ Phisherman has a number of community developed and maintained API wrappers:
 - [phisherman.gg](https://www.npmjs.com/package/phisherman.gg)
 
 ### Python
-- [phisherman.py](https://github.com/QristaLabs/phisherman.py)
+- [phisherman.py](https://github.com/QristaLabs/phisherman.py) (Asynchronous)
+- [Phisherman](https://github.com/IlluminatiFish/Phisherman) (Synchronous)
 
 ### Sapphire
 - [@sapphire/phisherman](https://www.npmjs.com/package/@sapphire/phisherman)
