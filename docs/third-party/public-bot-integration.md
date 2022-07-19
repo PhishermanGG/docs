@@ -5,7 +5,7 @@ Developers of public bots may integrate Phisherman as a plugin to provide anti-p
 ## Requirements
 If you are requesting access to use in a bot, it should meet one of the following criteria:
 
-A) Be a [Verified Bot](https://support.discord.com/hc/en-us/articles/360040720412-Bot-Verification-and-Data-Whitelisting)
+A) Be a [Verified Bot](https://support-dev.discord.com/hc/en-us/articles/6207083765655-What-is-Bot-Verification-)
 
 **OR**
 
