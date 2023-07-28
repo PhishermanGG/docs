@@ -2,26 +2,22 @@
 
 ::: warning
 v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
+
+**Update**: The v2 API is being rewritten from scratch. Any previous v2 API documentation will be obsolete.
 :::
 
-Returns information we have about a phishing domain. Responses are in `JSON` format.
+Checks the supplied domain against our database. Returns more data than the regular endpoint.
 
 :lock: **Auth Token:** Required  
 :key: **API Permission Required:** `API.READ`
 
-The URL for this endpoint is:
+The URL for this endpoint is: `https://api.phisherman.gg/v2/domains/<domain>/details`
 
-```:no-line-numbers
-https://api.phisherman.gg/v2/domains/<domain>/details
-```
+`<domain>` is to be replaced with the domain you want to check.
 
-### Required Parameters
+Example: `https://api.phisherman.gg/v2/domains/gimme-ur-money.scam/details`
 
-| Name     | Type     | Description                                       |
-| -------- | -------- | ------------------------------------------------- |
-| `domain` | _string_ | The fully qualified domain name you wish to query |
-
-### Example Request
+### Example request
 
 <CodeGroup>
   <CodeGroupItem title="CURL" active>
@@ -36,10 +32,22 @@ curl -L -X GET "https://api.phisherman.gg/v2/domains/internetbadguys.com/details
   <CodeGroupItem title="JS">
 
 ```js
-var myHeaders = new Headers();
+const response = await fetch("https://api.phisherman.gg/v2/domains/internetbadguys.com/details", {
+  headers: {
+    Authorization: "Bearer <API-KEY>"
+  }
+});
+
+const data = response.ok ? await response.json() : "Domain was not found or an error occurred.";
+```
+
+Other variant:
+
+```js
+const myHeaders = new Headers();
 myHeaders.append("Authorization", "Bearer <API-KEY>");
 
-var requestOptions = {
+const requestOptions = {
   method: "GET",
   headers: myHeaders,
   redirect: "follow"
@@ -73,41 +81,89 @@ print(data.decode("utf-8"))
 
 </CodeGroup>
 
-### Example Response
+### Response codes
+
+| HTTP Code | Description                                                                                                                    |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| `200`     | Domain was found. JSON data is returned in response. See below for full response.                                              |
+| `404`     | Domain was not found. `null` is returned.                                                                                      |
+| `500`     | An error occurred getting the domain details from the database. This doesn't necessarily mean the domain was or was not found. |
+
+### Example response
+
+::: details HTTP 200
 
 ```json
 {
-  "internetbadguys.com": {
-    "status": "ONLINE",
-    "created": "2021-10-31T14:39:24.000Z",
-    "lastChecked": "2021-10-31T14:39:29.000Z",
-    "verifiedPhish": false,
-    "classification": "suspicious",
-    "firstSeen": "2021-11-26T01:14:42.000Z",
-    "lastSeen": "2021-12-27T16:40:15.000Z",
-    "targetedBrand": "Other",
-    "phishCaught": 6,
-    "details": {
-      "phishTankId": "",
-      "urlScanId": "50c3429b-ee4d-452c-bad9-b4d5faaaffac",
-      "websiteScreenshot": "https://urlscan.io/screenshots/50c3429b-ee4d-452c-bad9-b4d5faaaffac.png",
-      "ip_address": "146.112.255.155",
+  "data": {
+    "id": "UUID",
+    "domain": "internetbadguys.com",
+    "classification": "malicious",
+    "verifiedPhish": true,
+    "targetedBrand": "Discord Inc.",
+    "screenshot": "https://phisherman.gg/domain/screenshot/public/UUID",
+    "network": {
+      "ip": "45.142.122.189",
       "asn": {
-        "asn": "AS36692",
-        "asn_name": "OPENDNS",
-        "route": "146.112.255.0/24"
+        "id": "210644",
+        "name": "AEZA-AS"
       },
-      "registry": "arin",
       "country": {
-        "code": "US",
-        "name": "United States"
+        "code": "NL",
+        "name": "Netherlands"
       }
+    },
+    "detections": {
+      "total": 1701,
+      "first": "2022-01-15T21:26:31.000Z",
+      "last": "2022-01-24T07:09:56.000Z"
+    },
+    "createdAt": "2022-01-15T16:34:42.000Z",
+    "links": {
+      "phishtank": null,
+      "urlscan": "https://urlscan.io/result/281ea6fe-9a2c-49dc-b323-40977ab36a22"
     }
   }
 }
 ```
 
+::: tip The following is always returned if the domain is found to be safe:
+
+```json
+{
+  "data": {
+    "domain": "<domain>",
+    "classification": "safe",
+    "verifiedPhish": false
+  }
+}
+```
+
+:::
+
+::: details HTTP 404
+
+```json
+{
+  "data": null
+}
+```
+
+:::
+
+::: details HTTP 500
+
+```json
+{
+  "message": "An error occurred getting the domain details from the database."
+}
+```
+
+:::
+
 ### Response Details
+
+This needs to be updated. Or even moved to a separate reference page.
 
 | Name                | Type        | Description                                                                                                                          |
 | ------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------ |
