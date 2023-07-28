@@ -87,11 +87,11 @@ print(data.decode("utf-8"))
 
 ### Response codes
 
-| HTTP Code | Description                                                                                                                    |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------ |
-| `200`     | Domain was found. JSON data is returned in response. See below for full response.                                              |
-| `404`     | Domain was not found. `null` is returned.                                                                                      |
-| `500`     | An error occurred getting the domain details from the database. This doesn't necessarily mean the domain was or was not found. |
+| Code  | Description                                                                                                                    |
+| :---- | :----------------------------------------------------------------------------------------------------------------------------- |
+| `200` | Domain was found. JSON data is returned in response. See below for full response.                                              |
+| `404` | Domain was not found. `null` is returned.                                                                                      |
+| `500` | An error occurred getting the domain details from the database. This doesn't necessarily mean the domain was or was not found. |
 
 ### Example response
 

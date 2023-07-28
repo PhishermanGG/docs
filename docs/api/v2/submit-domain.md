@@ -22,7 +22,7 @@ All the data needs to be sent in the request body.
 # Request parameters
 
 | Name            | Type     | Optional | Description                                        |
-| --------------- | -------- | -------- | -------------------------------------------------- |
+| :-------------- | :------- | :------- | :------------------------------------------------- |
 | `domain`        | _string_ | No       | The fully qualified domain name you wish to query. |
 | `targetedBrand` | _string_ | No       | The brand or company this phish is targetting.     |
 
@@ -74,12 +74,12 @@ const data = response.ok ? await response.json() : "Domain was not submitted.";
 
 ### Response codes
 
-| HTTP Code | Description                                          |
-| --------- | ---------------------------------------------------- |
-| `201`     | Domain was added to the database.                    |
-| `400`     | Request body does not match the allowed schema.      |
-| `403`     | Domain is marked as safe and cannot be submitted.    |
-| `500`     | An error occurred adding the domain to the database. |
+| Code  | Description                                          |
+| :---- | :--------------------------------------------------- |
+| `201` | Domain was added to the database.                    |
+| `400` | Request body does not match the allowed schema.      |
+| `403` | Domain is marked as safe and cannot be submitted.    |
+| `500` | An error occurred adding the domain to the database. |
 
 ### Example responses
 
