@@ -4,6 +4,7 @@ export default defineUserConfig({
   // site config
   title: "Phisherman",
   description: "A community driven anti-phishing API",
+  head: [["link", { rel: "icon", href: "/images/hero.png" }]],
 
   // theme and its config
   theme: defaultTheme({
