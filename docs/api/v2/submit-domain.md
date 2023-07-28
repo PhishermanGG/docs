@@ -56,7 +56,7 @@ curl -i -X POST https://api.phisherman.gg/v2/domains -H 'Authorization: Bearer A
   <CodeGroupItem title="JavaScript">
 
 ```js
-const response = await fetch("https://api.phisherman.gg/v2/domains/suspicious.test.phisherman.gg", {
+const response = await fetch("https://api.phisherman.gg/v2/domains", {
   headers: {
     Authorization: "Bearer <API-KEY>"
   },
