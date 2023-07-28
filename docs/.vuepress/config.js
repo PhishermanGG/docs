@@ -3,12 +3,13 @@ import { defaultTheme, defineUserConfig } from "vuepress";
 export default defineUserConfig({
   // site config
   title: "Phisherman",
-  description: "A community driven anti-phishing API",
+  description: "A community-driven anti-phishing API",
   head: [["link", { rel: "icon", href: "/images/hero.png" }]],
 
   // theme and its config
   theme: defaultTheme({
     logo: "/images/hero.png",
+    contributors: false,
     navbar: [
       // NavbarItem
       {
