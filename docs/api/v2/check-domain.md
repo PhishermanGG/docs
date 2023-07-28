@@ -1,3 +1,7 @@
+---
+description: Checks the supplied domain against our database.
+---
+
 # Check domain <Badge type="tip" text="GET" vertical="middle" />
 
 ::: warning

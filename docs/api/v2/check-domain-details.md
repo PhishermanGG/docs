@@ -1,3 +1,7 @@
+---
+description: Checks the supplied domain against our database. Returns more data than the regular endpoint.
+---
+
 # Check domain details <Badge type="tip" text="GET" vertical="middle" />
 
 ::: warning

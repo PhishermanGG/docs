@@ -1,3 +1,7 @@
+---
+description: Submits a new domain to the Phisherman database.
+---
+
 # Submit domain <Badge type="warning" text="POST" vertical="middle" />
 
 ::: warning
