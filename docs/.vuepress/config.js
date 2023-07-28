@@ -9,16 +9,13 @@ export default defineUserConfig({
   // theme and its config
   theme: defaultTheme({
     logo: "/images/hero.png",
+    repo: "https://github.com/PhishermanGG",
     contributors: false,
     navbar: [
       // NavbarItem
       {
         text: "Guide",
         link: "/guide"
-      },
-      {
-        text: "GitHub",
-        link: "https://github.com/PhishermanGG"
       },
       {
         text: "Homepage",
