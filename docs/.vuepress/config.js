@@ -43,7 +43,7 @@ export default defineUserConfig({
       {
         text: "API v2 Reference",
         collapsible: true,
-        children: ["/api/v2/check-domain.md", "/api/v2/check-domain-details.md", "/api/v2/submit-domain.md"]
+        children: ["/api/v2/api-design.md", "/api/v2/check-domain.md", "/api/v2/check-domain-details.md", "/api/v2/submit-domain.md"]
       },
       {
         text: "Integrations",
