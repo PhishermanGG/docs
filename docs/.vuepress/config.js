@@ -41,7 +41,7 @@ export default defineUserConfig({
       {
         text: "API v2 Reference",
         collapsible: true,
-        children: ["/api/v2/check-a-domain.md", "/api/v2/fetch-domain-details.md", "/api/v2/catching-a-phish.md", "/api/v2/report-a-phish.md"]
+        children: ["/api/v2/check-domain.md", "/api/v2/check-domain-details.md", "/api/v2/catching-a-phish.md", "/api/v2/report-a-phish.md"]
       },
       {
         text: "Integrations",
