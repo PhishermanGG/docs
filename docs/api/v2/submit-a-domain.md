@@ -12,7 +12,7 @@ Used for submitting a new domain to the Phisherman database
 The URL for this endpoint is:
 
 ```
-https://api.phisherman.gg/v1/domains
+https://api.phisherman.gg/v2/domains
 ```
 
 ### Example JSON payload
@@ -61,7 +61,7 @@ Accepted options for `targetBrand` brand are:
 ### Example request
 
 ```
-curl -i -X POST https://api.phisherman.gg/v1/domains -H 'Authorization: Bearer API-KEY' -H 'Content-Type: application/json' -d '{"hostname": "internetbadguys.com", "targetBrand": "OTHER"}'
+curl -i -X POST https://api.phisherman.gg/v2/domains -H 'Authorization: Bearer API-KEY' -H 'Content-Type: application/json' -d '{"hostname": "internetbadguys.com", "targetBrand": "OTHER"}'
 ```
 
 ### Example response

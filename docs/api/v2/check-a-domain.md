@@ -12,7 +12,7 @@ Checks the supplied domain against our database. Returns the classification and 
 The URL for this endpoint is:
 
 ```:no-line-numbers
-https://api.phisherman.gg/v2/domains/check/<domain>
+https://api.phisherman.gg/v2/domains/<domain>
 ```
 
 ### Required Parameters
@@ -24,14 +24,14 @@ https://api.phisherman.gg/v2/domains/check/<domain>
 ### Example Request
 
 <CodeGroup>
-   <CodeGroupItem title="CURL" active>
+  <CodeGroupItem title="CURL" active>
 
 ```bash
-curl -L -X GET "https://api.phisherman.gg/v2/domains/check/suspicious.test.phisherman.gg" \
+curl -L -X GET "https://api.phisherman.gg/v2/domains/suspicious.test.phisherman.gg" \
 -H "Authorization: Bearer <API-KEY>"
 ```
 
-</CodeGroupItem>
+  </CodeGroupItem>
 
   <CodeGroupItem title="JS">
 
@@ -45,7 +45,7 @@ var requestOptions = {
   redirect: "follow"
 };
 
-fetch("https://api.phisherman.gg/v2/domains/check/suspicious.test.phisherman.gg", requestOptions)
+fetch("https://api.phisherman.gg/v2/domains/suspicious.test.phisherman.gg", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log("error", error));
@@ -53,7 +53,7 @@ fetch("https://api.phisherman.gg/v2/domains/check/suspicious.test.phisherman.gg"
 
   </CodeGroupItem>
 
-  <CodeGroupItem title="Python">
+<CodeGroupItem title="Python">
 
 ```py
 import http.client
@@ -63,7 +63,7 @@ payload = ''
 headers = {
   'Authorization': 'Bearer <API-KEY>'
 }
-conn.request("GET", "/v2/domains/check/suspicious.test.phisherman.gg", payload, headers)
+conn.request("GET", "/v2/domains/suspicious.test.phisherman.gg", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))
