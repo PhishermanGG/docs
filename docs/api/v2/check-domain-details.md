@@ -89,13 +89,14 @@ print(data.decode("utf-8"))
 
 | Code  | Description                                                                                                                    |
 | :---- | :----------------------------------------------------------------------------------------------------------------------------- |
-| `200` | Domain was found. JSON data is returned in response. See below for full response.                                              |
-| `404` | Domain was not found. `null` is returned.                                                                                      |
+| `200` | Domain was found. JSON data is returned in response. (See below for full response)                                             |
+| `404` | Domain was not found.                                                                                                          |
 | `500` | An error occurred getting the domain details from the database. This doesn't necessarily mean the domain was or was not found. |
 
 ### Example response
 
 ::: details HTTP 200
+Domain was found. JSON data is returned in response.
 
 ```json
 {
@@ -146,6 +147,7 @@ print(data.decode("utf-8"))
 :::
 
 ::: details HTTP 404
+Domain was not found.
 
 ```json
 {
@@ -156,6 +158,7 @@ print(data.decode("utf-8"))
 :::
 
 ::: details HTTP 500
+An error occurred getting the domain details from the database. This doesn't necessarily mean the domain was or was not found.
 
 ```json
 {
