@@ -11,6 +11,18 @@ export default defineUserConfig({
     logo: "/images/hero.png",
     repo: "https://github.com/PhishermanGG",
     contributors: false,
+    notFound: [
+      "Looks like you've taken the wrong bait.",
+      "Oh no, it seems the phish escaped!",
+      "Oops, there's nothing phishy here.",
+      "Sorry, the phishing net came up empty.",
+      "Looks like you've ventured off the hook.",
+      "Something smells phishy...",
+      "Hook, line, but no page.",
+      "Phishy business ahead!",
+      "Looks like you've caught an empty net.",
+      "Page's gone to swim with the phishes."
+    ],
     navbar: [
       // NavbarItem
       {
