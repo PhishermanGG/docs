@@ -1,4 +1,4 @@
-# Reporting a new phish <Badge type="warning" text="PUT" vertical="middle" /> 
+# Reporting a new phish <Badge type="warning" text="PUT" vertical="middle" />
 
 ::: warning
 v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
@@ -7,17 +7,19 @@ v2 API is still in beta, there may be breaking changes at any time. It is recomm
 Used to submit a new phish to Phisherman. Note that all reports are reviewed manually before any new domains are added to Phisherman.
 
 :lock: **Auth Token:** Required  
-:key: **API Permission Required:** `API.READ`  
+:key: **API Permission Required:** `API.READ`
 
 The URL for this endpoint is:
+
 ```:no-line-numbers
 https://api.phisherman.gg/v2/phish/report
 ```
 
 ### Required Parameters
-|Name|Type|Description|
-|---|---|---|
-|`url`|_string_|The full url of the phish you wish to report|
+
+| Name  | Type     | Description                                  |
+| ----- | -------- | -------------------------------------------- |
+| `url` | _string_ | The full url of the phish you wish to report |
 
 ### Example Requests
 
@@ -43,20 +45,20 @@ myHeaders.append("Authorization", "Bearer <API-KEY>");
 myHeaders.append("Content-Type", "application/json");
 
 var raw = JSON.stringify({
-  "url": "https://internetbadguys.com/some-scam"
+  url: "https://internetbadguys.com/some-scam"
 });
 
 var requestOptions = {
-  method: 'PUT',
+  method: "PUT",
   headers: myHeaders,
   body: raw,
-  redirect: 'follow'
+  redirect: "follow"
 };
 
 fetch("https://api.phisherman.gg/v2/phish/report", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
-  .catch(error => console.log('error', error));
+  .catch(error => console.log("error", error));
 ```
 
   </CodeGroupItem>
@@ -86,6 +88,7 @@ print(data.decode("utf-8"))
 </CodeGroup>
 
 ### Example Response
+
 ```
 HTTP2/201
 {

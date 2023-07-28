@@ -4,8 +4,6 @@ Phisherman operates a "traffic light" system to classifiy domains.
 
 These are returned when using the [check](/api/check-a-domain.md) or [info](/api/fetch-domain-info.md) endpoints. A description of their meanings is listed below.
 
-
-
 ::: tip Safe
 Domain has been verified as belonging to a reputable organisation (Discord, Steam etc.)
 

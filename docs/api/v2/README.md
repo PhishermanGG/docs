@@ -29,21 +29,20 @@ Requests must be sent over HTTPS with any payload formatted in JSON. Depending o
 API Tokens provide a way to authenticate with the Phisherman API. They allow for scoped and permissioned access to resources and use the [Authorization Bearer Token Header](https://tools.ietf.org/html/rfc6750#section-2.1).
 
 ### API Permissions
-Some API endpoints require additional permissions to be enabled for your account as well as an API token to be sent via headers. You can view your current API permissions on your [settings page](https://phisherman.gg/user/settings)
 
+Some API endpoints require additional permissions to be enabled for your account as well as an API token to be sent via headers. You can view your current API permissions on your [settings page](https://phisherman.gg/user/settings)
 
 ### HTTP response codes
 
 The status of a response can be determined from the HTTP status code.
 
-
-|Code|Status|Description|
-|---|---|---|
-|200|OK|Request successful|
-|201|OK|Request successful|
-|304|Not Modified|
-|400|Bad Request|Request was invalid|
-|401|Unauthorized|User does not have permission|
-|403|Forbidden|Request not authenticated|
-|429|Too many requests|Client is rate limited|
-|500|Internal Server Error|An error occured, please try again later|
+| Code | Status                | Description                              |
+| ---- | --------------------- | ---------------------------------------- |
+| 200  | OK                    | Request successful                       |
+| 201  | OK                    | Request successful                       |
+| 304  | Not Modified          |
+| 400  | Bad Request           | Request was invalid                      |
+| 401  | Unauthorized          | User does not have permission            |
+| 403  | Forbidden             | Request not authenticated                |
+| 429  | Too many requests     | Client is rate limited                   |
+| 500  | Internal Server Error | An error occured, please try again later |
