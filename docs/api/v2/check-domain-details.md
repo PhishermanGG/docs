@@ -101,12 +101,12 @@ Domain was found. JSON data is returned in response.
 ```json
 {
   "data": {
-    "id": "UUID",
     "domain": "internetbadguys.com",
     "classification": "malicious",
     "verifiedPhish": true,
     "targetedBrand": "Discord Inc.",
     "screenshot": "https://phisherman.gg/domain/screenshot/public/UUID",
+    "created": "2022-01-15T16:34:42.000Z",
     "network": {
       "ip": "45.142.122.189",
       "asn": {
@@ -123,10 +123,9 @@ Domain was found. JSON data is returned in response.
       "first": "2022-01-15T21:26:31.000Z",
       "last": "2022-01-24T07:09:56.000Z"
     },
-    "createdAt": "2022-01-15T16:34:42.000Z",
     "links": {
-      "phishtank": null,
-      "urlscan": "https://urlscan.io/result/281ea6fe-9a2c-49dc-b323-40977ab36a22"
+      "phishtank": "https://phishtank.org/phish_detail.php?phish_id=ID",
+      "urlscan": "https://urlscan.io/result/ID"
     }
   }
 }
