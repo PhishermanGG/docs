@@ -47,7 +47,7 @@ curl -L -X POST "https://api.phisherman.gg/v2/phish/caught/suspicious.test.phish
 
   </CodeGroupItem>
 
-  <CodeGroupItem title="JS">
+  <CodeGroupItem title="JavaScript">
 
 ```js
 var myHeaders = new Headers();
@@ -170,7 +170,7 @@ curl -L -X POST "https://api.phisherman.gg/v2/phish/caught/bulk" \
 
 </CodeGroupItem>
 
-  <CodeGroupItem title="JS">
+  <CodeGroupItem title="JavaScript">
 
 ```js
 var myHeaders = new Headers();

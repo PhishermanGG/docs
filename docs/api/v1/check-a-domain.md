@@ -30,7 +30,7 @@ curl -L -X GET "https://api.phisherman.gg/v1/domains/internetbadguys.com"
 
 </CodeGroupItem>
 
-  <CodeGroupItem title="JS">
+  <CodeGroupItem title="JavaScript">
 
 ```js
 var requestOptions = {

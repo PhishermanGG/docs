@@ -37,7 +37,7 @@ curl -L -X PUT "https://api.phisherman.gg/v2/phish/report" \
 
   </CodeGroupItem>
 
-  <CodeGroupItem title="JS">
+  <CodeGroupItem title="JavaScript">
 
 ```js
 var myHeaders = new Headers();

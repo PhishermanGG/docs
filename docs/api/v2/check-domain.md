@@ -33,7 +33,7 @@ curl -L -X GET "https://api.phisherman.gg/v2/domains/suspicious.test.phisherman.
 
   </CodeGroupItem>
 
-  <CodeGroupItem title="JS">
+  <CodeGroupItem title="JavaScript">
 
 ```js
 const response = await fetch("https://api.phisherman.gg/v2/domains/suspicious.test.phisherman.gg", {

@@ -43,7 +43,7 @@ curl -L -X PUT "https://api.phisherman.gg/v1/domains/verified.test.phisherman.gg
 
   </CodeGroupItem>
 
-  <CodeGroupItem title="JS">
+  <CodeGroupItem title="JavaScript">
 
 ```js
 var myHeaders = new Headers();
