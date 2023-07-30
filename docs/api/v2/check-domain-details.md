@@ -90,6 +90,7 @@ print(data.decode("utf-8"))
 | Code  | Description                                                                                                                    |
 | :---- | :----------------------------------------------------------------------------------------------------------------------------- |
 | `200` | Domain was found. JSON data is returned in response. (See below for full response)                                             |
+| `400` | Invalid domain. Domain sent did not pass validation.                                                                           |
 | `404` | Domain was not found.                                                                                                          |
 | `500` | An error occurred getting the domain details from the database. This doesn't necessarily mean the domain was or was not found. |
 
@@ -139,6 +140,27 @@ Domain was found. JSON data is returned in response.
     "domain": "<domain>",
     "classification": "safe",
     "verifiedPhish": false
+  }
+}
+```
+
+:::
+
+::: details HTTP 400
+Invalid domain. Domain sent did not pass validation.
+
+```json
+{
+  "message": "Invalid domain.",
+  "error": {
+    "issues": [
+      {
+        "code": "custom",
+        "message": "'invalid-domain..com' is not a valid domain.",
+        "path": []
+      }
+    ],
+    "name": "ZodError"
   }
 }
 ```

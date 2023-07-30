@@ -107,11 +107,16 @@ Request body does not match the allowed schema. The Zod error will be returned.
   "error": {
     "issues": [
       {
+        "code": "custom",
+        "message": "'invalid-domain..com' is not a valid domain.",
+        "path": ["domain"]
+      },
+      {
         "code": "invalid_type",
         "expected": "string",
-        "received": "undefined",
+        "received": "boolean",
         "path": ["targetedBrand"],
-        "message": "Required"
+        "message": "Expected string, received boolean"
       }
     ],
     "name": "ZodError"
