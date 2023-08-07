@@ -12,9 +12,6 @@ hero:
   - theme: alt
     text: About
     link: /guide/introduction
-  - theme: alt
-    text: Discord Server
-    link: https://discord.gg/QwrpmTgvWy
 
 features:
  - icon: 💡
