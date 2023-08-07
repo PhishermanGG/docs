@@ -60,3 +60,7 @@ The status of a response can be determined from the HTTP status code.
 | 403  | Forbidden             | You are not allowed to perform that action                |
 | 429  | Too many requests     | Your request exceeded the API rate limit                  |
 | 500  | Internal Server Error | Unable to perform the request due to server-side problems |
+
+::: tip
+Each endpoint page will have its own specific response codes listed.
+:::
