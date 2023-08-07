@@ -8,7 +8,7 @@ Reporting back caught phish is entirely optional and not required for normal usa
 
 ### Large & High Traffic Bots
 
-If your bot serves a large number of high traffic servers, we recommend using the [Bulk Detection](/api/v2/catching-a-phish.html#bulk-reporting) endpoint to help reduce the number of API made.
+If your bot serves a large number of high traffic servers, we recommend using the [Bulk Detection Reporting](/api/v2/detections/report-detection-bulk) endpoint to help reduce the number of API made.
 
 ## User Agent Header
 

@@ -2,7 +2,7 @@
 
 Phisherman operates a "traffic light" system to classifiy domains.
 
-These are returned when using the [check](/api/check-a-domain.md) or [info](/api/fetch-domain-info.md) endpoints. A description of their meanings is listed below.
+These are returned when using the [check a domain](/api/v2/domains/check-domain) or [check domain details](/api/v2/domains/check-domain-details) endpoints. A description of their meanings is listed below.
 
 ::: tip Genuine
 Site has been verified as being the genuine website for an organisation (Discord, Steam etc.)

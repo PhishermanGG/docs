@@ -56,7 +56,7 @@ export default defineConfig({
 								collapsed: true,
 								items: [
 									{ text: "Report A Detection", link: "/api/v2/detections/report-detection" },
-									{ text: "Report Bulk Detections", link: "/api/v2/detections/report-detection-bulk" },
+									{ text: "Bulk Report Detections", link: "/api/v2/detections/report-detections-bulk" },
 								],
 							},
 							{

@@ -6,7 +6,7 @@ description: Used to submit a new phish to Phisherman. Note that all reports are
 v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
 :::
 
-# Report Bulk Detections <Badge type="warning" text="POST" />
+# Bulk Report Detections <Badge type="warning" text="POST" />
 
 For public bots that serve a large number of guilds, Phisherman offers a bulk reporting endpoint to help reduce the number of API calls made.
 
