@@ -2,7 +2,7 @@
 description: Checks the supplied domain against our database.
 ---
 
-# Check domain <Badge type="tip" text="GET" />
+# Check A Domain <Badge type="tip" text="GET" />
 
 Checks the supplied domain against our database.
 
@@ -18,7 +18,7 @@ What you send to the API.
 
 ::: details Authentication
 
-:lock: **Auth Token:** Required  
+:lock: **API Key:** Required  
 :key: **API Permission Required:** `API.READ`
 
 Provide your API key in the Authorization header when making requests.
@@ -43,12 +43,15 @@ Example: `https://api.phisherman.gg/v2/domains/gimme-ur-money.scam`
 
 ```sh [CURL]
 curl -L -X GET "https://api.phisherman.gg/v2/domains/suspicious.test.phisherman.gg" \
+-H "Content-Type: application/json" \
 -H "Authorization: Bearer <API-KEY>"
+
 ```
 
-```js [JavaScript]
+```js [Javascript]
 const response = await fetch("https://api.phisherman.gg/v2/domains/suspicious.test.phisherman.gg", {
 	headers: {
+		"Content-Type": "application/json",
 		Authorization: "Bearer <API-KEY>",
 	},
 });
@@ -62,7 +65,8 @@ import http.client
 conn = http.client.HTTPSConnection("api.phisherman.gg")
 payload = ''
 headers = {
-  'Authorization': 'Bearer <API-KEY>'
+	'Content-Type': 'application/json',
+	'Authorization': 'Bearer <API-KEY>'
 }
 conn.request("GET", "/v2/domains/suspicious.test.phisherman.gg", payload, headers)
 res = conn.getresponse()
@@ -76,68 +80,109 @@ print(data.decode("utf-8"))
 
 What you get back from the API.
 
-### Response codes
-
-| Code  | Description                                                                                                            |
-| :---- | :--------------------------------------------------------------------------------------------------------------------- |
-| `200` | Domain was found. JSON data is returned in response. (See below for full response)                                     |
-| `400` | Invalid domain. Domain sent did not pass validation.                                                                   |
-| `404` | Domain was not found.                                                                                                  |
-| `500` | An error occurred getting the domain from the database. This doesn't necessarily mean the domain was or was not found. |
-
-### Example responses
+### Regular Domains
 
 ::: code-group
 
 ```json [HTTP 200]
 {
-  "data": {
-    "domain": "suspicious.test.phisherman.gg",
-    "classification": "suspicious",
-    "verifiedPhish": false
-  }
-}
-
-// The following is always returned if the domain is found to be safe:
-{
-  "data": {
-    "domain": "<domain>",
-    "classification": "safe",
-    "verifiedPhish": false
-  }
+	"success": true,
+	"message": "",
+	"data": {
+		"domain": "suspicious.test.phisherman.gg",
+		"classification": "suspicious",
+		"verifiedPhish": false
+	}
 }
 ```
 
 ```json [HTTP 400]
 {
-	"message": "Invalid domain.",
-	"error": {
-		"issues": [
-			{
-				"code": "custom",
-				"message": "'invalid-domain..com' is not a valid domain.",
-				"path": []
-			}
-		],
-		"name": "ZodError"
+	"success": false,
+	"message": {
+		"error": {
+			"issues": [
+				{
+					"code": "custom",
+					"message": "'invalid-domain..com' is not a valid domain.",
+					"path": []
+				}
+			],
+			"name": "ZodError"
+		}
 	}
 }
 ```
 
 ```json [HTTP 404]
 {
-	"data": null
+	"success": false,
+	"message": "Not found",
+	"data": {}
 }
 ```
 
 ```json [HTTP 500]
 {
-	"message": "An error occurred getting the domain from the database."
+	"success": false,
+	"message": "An error occurred getting the domain details from the database.",
+	"data": {}
 }
 ```
 
 :::
 
-::: tip
+### Protected Domains
+
+::: code-group
+
+```json [HTTP 200]
+{
+	"success": true,
+	"message": "",
+	"data": {
+		"domain": "<domain>",
+		"classification": "safe",
+		"verifiedPhish": false
+	}
+}
+```
+
+```json [HTTP 400]
+{
+	"success": false,
+	"message": {
+		"error": {
+			"issues": [
+				{
+					"code": "custom",
+					"message": "'invalid-domain..com' is not a valid domain.",
+					"path": []
+				}
+			],
+			"name": "ZodError"
+		}
+	}
+}
+```
+
+```json [HTTP 404]
+{
+	"success": false,
+	"message": "Not found",
+	"data": {}
+}
+```
+
+```json [HTTP 500]
+{
+	"success": false,
+	"message": "An error occurred getting the domain details from the database.",
+	"data": {}
+}
+```
+
+:::
+
 Please see the [Domain Classifications](/guide/domain-classifications.md) page for information on each classification.
 :::

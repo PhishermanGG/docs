@@ -16,7 +16,14 @@ Reporting detections is entirely optional and not required for normal usage, tho
 
 ## Request
 
+## Request
+
+What you send to the API.
+
 ::: details Authentication
+
+:lock: **API Key:** Required  
+:key: **API Permission Required:** `API.DETECTIONS.BULK`
 
 Provide your API key in the Authorization header when making requests.
 
@@ -86,31 +93,31 @@ curl -L -X POST "https://api.phisherman.gg/v2/detections/bulk" \
 
 ```js [Javascript]
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'application/json');
-myHeaders.append('Authorization', 'Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh');
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh");
 
 var raw = JSON.stringify({
-	'<USER#1-API-KEY>': {
-		'https://internetbadguys.com/random-page-url': [1635591332, 1635592459],
-		'https://malicious.test.phisherman.gg': [1635591332],
+	"<USER#1-API-KEY>": {
+		"https://internetbadguys.com/random-page-url": [1635591332, 1635592459],
+		"https://malicious.test.phisherman.gg": [1635591332],
 	},
-	'<USER#2-API-KEY>': {
-		'https://internetbadguys.com/random-page-url': [1635591332, 1635592459],
-		'https://malicious.test.phisherman.gg': [1635591332],
+	"<USER#2-API-KEY>": {
+		"https://internetbadguys.com/random-page-url": [1635591332, 1635592459],
+		"https://malicious.test.phisherman.gg": [1635591332],
 	},
 });
 
 var requestOptions = {
-	method: 'POST',
+	method: "POST",
 	headers: myHeaders,
 	body: raw,
-	redirect: 'follow',
+	redirect: "follow",
 };
 
-fetch('https://api.phisherman.gg/v2/detections/bulk', requestOptions)
+fetch("https://api.phisherman.gg/v2/detections/bulk", requestOptions)
 	.then(response => response.text())
 	.then(result => console.log(result))
-	.catch(error => console.log('error', error));
+	.catch(error => console.log("error", error));
 ```
 
 ```py [Python]

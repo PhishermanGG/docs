@@ -19,7 +19,7 @@ What you send to the API.
 ::: details Authentication
 
 :lock: **Auth Token:** Required  
-:key: **API Permission Required:** `API.CREATE`
+:key: **API Permission Required:** `API.DOMAINS.CREATE`
 
 Provide your API key in the Authorization header when making requests.
 
@@ -37,10 +37,10 @@ All the data needs to be sent in the request body.
 
 ### Request parameters
 
-| Name            | Type     | Optional | Description                                        |
-| :-------------- | :------- | :------- | :------------------------------------------------- |
-| `domain`        | _string_ | No       | The fully qualified domain name you wish to query. |
-| `targetedBrand` | _string_ | No       | The brand or company this phish is targetting.     |
+| Name            | Type     | Optional | Description                                              |
+| :-------------- | :------- | :------- | :------------------------------------------------------- |
+| `domain`        | _string_ | No       | The fully qualified domain name you wish to submit.      |
+| `targetedBrand` | _string_ | No       | The ID of the brand or company this phish is targetting. |
 
 ### Example JSON payload
 
@@ -51,12 +51,9 @@ All the data needs to be sent in the request body.
 }
 ```
 
-**TBD**
-Accepted options for `targetedBrand` brand are:
+### Accepted Brands
 
-- `DISCORD`
-- `STEAM`
-- `OTHER`
+A list of accepted brand ID's for `targetedBrand` can be found on the [Brands](/api/v2/brands/get-brands) page.
 
 ### Example requests
 
@@ -85,15 +82,6 @@ const data = response.ok ? await response.json() : "Domain was not submitted.";
 ## Response
 
 What you get back from the API.
-
-### Response codes
-
-| Code  | Description                                          |
-| :---- | :--------------------------------------------------- |
-| `201` | Domain was added to the database.                    |
-| `400` | Request body does not match the allowed schema.      |
-| `403` | Domain is marked as safe and cannot be submitted.    |
-| `500` | An error occurred adding the domain to the database. |
 
 ### Example responses
 

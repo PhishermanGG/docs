@@ -23,8 +23,7 @@ export default defineConfig({
 				items: [
 					{ text: "Introduction", link: "/guide/introduction" },
 					{ text: "Getting Started", link: "/guide/getting-started" },
-					{ text: "Domain Classifications", link: "/guide/domain-classifications" },
-					{ text: "Runtime API Examples", link: "/api-examples" },
+					{ text: "Domain Classifications", link: "/guide/domain-classifications" }
 				],
 			},
 			{
@@ -35,14 +34,13 @@ export default defineConfig({
 						collapsed: true,
 						items: [
 							{ text: "Introduction", link: "/api/v2/introduction" },
-							{ text: "API Design", link: "/api/v2/api-design" },
 							{
 								text: "Domains",
 								collapsed: true,
 								items: [
-									{ text: "Check domain", link: "/api/v2/domains/check-domain" },
-									{ text: "Check domain details", link: "/api/v2/domains/check-domain-details" },
-									{ text: "Submit domain", link: "/api/v2/domains/submit-domain" },
+									{ text: "Check A Domain", link: "/api/v2/domains/check-domain" },
+									{ text: "Get Domain Details", link: "/api/v2/domains/check-domain-details" },
+									{ text: "Submit A Domain", link: "/api/v2/domains/submit-domain" },
 								],
 							},
 							{
@@ -61,6 +59,13 @@ export default defineConfig({
 									{ text: "Report Bulk Detections", link: "/api/v2/detections/report-detection-bulk" },
 								],
 							},
+							{
+								text: "Brands",
+								collapsed: true,
+								items: [
+									{ text: "Get All Brands", link: "/api/v2/brands/get-brands" }
+								],
+							},
 						],
 					},
 					{
@@ -69,6 +74,7 @@ export default defineConfig({
 						items: [
 							{ text: "Introduction", link: "/api/integration/introduction" },
 							{ text: "Requirements", link: "/api/integration/requirements" },
+							{ text: "Testing Your Integration", link: "/api/integration/testing-your-integration" },
 							{ text: "Best Practices", link: "/api/integration/best-practices" },
 						],
 					},
@@ -80,6 +86,14 @@ export default defineConfig({
 							{ text: "Integrated Bots", link: "/third-party/integrated-bots" },
 						],
 					},
+				],
+			},
+			{
+				text: "Trawler",
+				collapsed: false,
+				items: [
+					{ text: "Introduction", link: "/trawler/introduction" },
+					{ text: "Report New Phish", link: "/trawler/report-new-phish" },
 				],
 			},
 		],

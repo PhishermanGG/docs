@@ -4,7 +4,7 @@ layout: home
 
 hero:
  name: "Phisherman"
- text: "A community-driven anti-phishing API"
+ text: "A community driven anti-phishing API"
  actions:
   - theme: brand
     text: Go Phishing

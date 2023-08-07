@@ -7,6 +7,7 @@ Using the Phisherman API requires authentication so that we know who is making r
 If you do not have access to the dashboard, please see our [Getting Started](/guide/getting-started.md) page
 
 ## API Base URL
+
 ```
 https://api.phisherman.gg/v2/
 ```
@@ -16,6 +17,7 @@ https://api.phisherman.gg/v2/
 Requests must be sent over HTTPS with any payload formatted in JSON.
 
 ### Authentication
+
 All API endpoints require authemtication. Provide your bearer token in the [Authorization Bearer Token Header](https://tools.ietf.org/html/rfc6750#section-2.1) when making requests.
 
 **Example**
@@ -58,78 +60,3 @@ The status of a response can be determined from the HTTP status code.
 | 403  | Forbidden             | You are not allowed to perform that action                |
 | 429  | Too many requests     | Your request exceeded the API rate limit                  |
 | 500  | Internal Server Error | Unable to perform the request due to server-side problems |
-
-## Testing your integration
-
-In order for you to verify your Phisherman integration is fully functional, we provide a selection of domains that will trigger Phisherman as a real phish would.
-
-The following domains can be used for testing:
-
-| Domain                          | Status                                   |
-| ------------------------------- | ---------------------------------------- |
-| `suspicious.test.phisherman.gg` | Triggers as a suspicious domain          |
-| `verified.test.phisherman.gg`   | Triggers as a verified, malicious domain |
-| `unknown.test.phisherman.gg`    | Triggers as an unknown domain            |
-
-### Expected Responses
-
-Below are the expected responses when using the [Check A Domain](/api/v2/domains/check-domain) v2 endpoint.
-
-::: details suspicious.test.phisherman.gg
-
-HTTP Code:
-```
-200
-```
-
-Body:
-```json
-{
-	"success": true,
-	"message": "",
-	"data": {
-		"domain": "suspicious.test.phisherman.gg",
-		"classification": "suspicious",
-		"verifiedPhish": false
-	}
-}
-```
-:::
-
-::: details verified.test.phisherman.gg
-
-HTTP Code:
-```
-200
-```
-
-Body:
-```json
-{
-	"success": true,
-	"message": "",
-	"data": {
-		"domain": "verified.test.phisherman.gg",
-		"classification": "malicious",
-		"verifiedPhish": true
-	}
-}
-```
-:::
-
-::: details unknown.test.phisherman.gg
-
-HTTP Code:
-```
-404
-```
-
-Body:
-```json
-{
-	"success": false,
-	"message": "not found",
-	"data": {}
-}
-```
-:::

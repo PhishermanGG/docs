@@ -16,7 +16,12 @@ Reporting detections is entirely optional and not required for normal usage, tho
 
 ## Request
 
+What you send to the API.
+
 ::: details Authentication
+
+:lock: **API Key:** Required  
+:key: **API Permission Required:** `API.READ`
 
 Provide your API key in the Authorization header when making requests.
 
@@ -65,25 +70,25 @@ curl -L -X POST "https://api.phisherman.gg/v2/detections" \
 
 ```js [Javascript]
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'application/json');
-myHeaders.append('Authorization', 'Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh');
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh");
 
 var raw = JSON.stringify({
-	url: 'https://internetbadguys.com/',
-	guild: '878130674844979210',
+	url: "https://internetbadguys.com/",
+	guild: "878130674844979210",
 });
 
 var requestOptions = {
-	method: 'POST',
+	method: "POST",
 	headers: myHeaders,
 	body: raw,
-	redirect: 'follow',
+	redirect: "follow",
 };
 
-fetch('https://api.phisherman.gg/v2/detections', requestOptions)
+fetch("https://api.phisherman.gg/v2/detections", requestOptions)
 	.then(response => response.text())
 	.then(result => console.log(result))
-	.catch(error => console.log('error', error));
+	.catch(error => console.log("error", error));
 ```
 
 ```py [Python]
@@ -114,12 +119,12 @@ Report A Detection response
 
 ```json [HTTP201]
 {
-    "data": {
-        "id": "cf70a2e3-b913-4801-8499-9b09dd6ece78",
-        "domain": "internetbadguys.com",
-        "url": "https://internetbadguys.com/",
-        "timestamp": "2023-08-07T03:23:29.754Z"
-    }
+	"data": {
+		"id": "cf70a2e3-b913-4801-8499-9b09dd6ece78",
+		"domain": "internetbadguys.com",
+		"url": "https://internetbadguys.com/",
+		"timestamp": "2023-08-07T03:23:29.754Z"
+	}
 }
 ```
 

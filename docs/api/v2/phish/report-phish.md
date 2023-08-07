@@ -2,13 +2,13 @@
 description: Used to submit a new phish to Phisherman. Note that all reports are reviewed manually before any new domains are added to Phisherman.
 ---
 
-::: warning
-v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
-:::
-
 # Report New Phish <Badge type="warning" text="POST" />
 
 Used to submit a new phish to Phisherman.
+
+::: warning
+v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
+:::
 
 ::: info NOTE
 All reports are reviewed manually before any new domains are added to Phisherman.
@@ -17,6 +17,9 @@ All reports are reviewed manually before any new domains are added to Phisherman
 ## Request
 
 ::: details Authentication
+
+:lock: **API Key:** Required  
+:key: **API Permission Required:** `API.READ`
 
 Provide your API key in the Authorization header when making requests.
 
@@ -42,9 +45,9 @@ https://api.phisherman.gg/v2/phish/report
 }
 ```
 
-| Name  | Type     | Required                        | Description                                  |
-| ----- | -------- | ------------------------------- | -------------------------------------------- |
-| `url` | _string_ | ![Yes](/images/green-check.png) | The full url of the phish you wish to report |
+| Name  | Type     | Required | Description                                  |
+| ----- | -------- | -------- | -------------------------------------------- |
+| `url` | _string_ | ✅ Yes   | The full url of the phish you wish to report |
 
 ### Examples
 
@@ -52,8 +55,8 @@ https://api.phisherman.gg/v2/phish/report
 
 ```sh [CURL]
 curl -L -X POST "https://api.phisherman.gg/v2/phish/report" \
--H "Authorization: Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh"
 -H "Content-Type: application/json" \
+-H "Authorization: Bearer <API-KEY>"
 --data-raw "{
     \"url\": "https://internetbadguys.com"
 }"
@@ -62,24 +65,24 @@ curl -L -X POST "https://api.phisherman.gg/v2/phish/report" \
 
 ```js [Javascript]
 var myHeaders = new Headers();
-myHeaders.append('Content-Type', 'application/json');
-myHeaders.append('Authorization', 'Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh');
+myHeaders.append("Content-Type", "application/json");
+myHeaders.append("Authorization", "Bearer <API-KEY>");
 
 var raw = JSON.stringify({
-  url: "https://internetbadguys.com/"
+	url: "https://internetbadguys.com/",
 });
 
 var requestOptions = {
-  method: "POST",
-  headers: myHeaders,
-  body: raw,
-  redirect: "follow"
+	method: "POST",
+	headers: myHeaders,
+	body: raw,
+	redirect: "follow",
 };
 
 fetch("https://api.phisherman.gg/v2/phish/report", requestOptions)
-  .then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log("error", error));
+	.then(response => response.text())
+	.then(result => console.log(result))
+	.catch(error => console.log("error", error));
 ```
 
 ```py [Python]
@@ -91,7 +94,7 @@ payload = json.dumps({
 })
 headers = {
 	'Content-Type': 'application/json',
-	'Authorization': 'Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh'
+	'Authorization': 'Bearer <API-KEY>'
 }
 conn.request("POST", "/v2/phish/report", payload, headers)
 res = conn.getresponse()
