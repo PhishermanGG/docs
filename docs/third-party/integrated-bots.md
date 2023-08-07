@@ -1,4 +1,4 @@
-# Phisherman Integrated Bots
+# Integrated Bots
 
 Phisherman is fully integrated with the following third-party, public bots:
 

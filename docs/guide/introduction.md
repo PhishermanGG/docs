@@ -10,20 +10,18 @@ Due to the number of phishing domains being created on a daily basis, having to 
 
 ## What sources do you use?
 
-Phisherman ingests from multiple sources in order to provide the best possible coverage of phishing domains. Currently we automatically ingest from the 'phish' API (a Discord community driven initiative), [PhishTank](https://phishtank.org/) as well as manual submissions via the Phisherman discord server and API functions. In addition, we also monitor Certificate Transparency logs to help identify new scam domains.
+Phisherman ingests from multiple sources in order to provide the best possible coverage of phishing domains. Currently we automatically ingest from the 'phish' API (a Discord community driven initiative), [PhishTank](https://phishtank.org/) as well as manual submissions via the Phisherman discord server and API functions.
 
 ## What tech stack do you use?
 
 Phisherman is built with :heart: (and :coffee:) using:
 
-- [Node.js](https://nodejs.org)
-- [MySQL](https://www.mysql.com/)
-- [ExpressJS](https://expressjs.com/)
-- [NGINX](https://www.nginx.com/)
 - [Cloudflare Workers](https://workers.cloudflare.com/)
 - [Cloudflare Workers KV](https://www.cloudflare.com/products/workers-kv/)
-- [CertStream](https://certstream.calidog.io/)
-- [PyFunceble](https://github.com/PyFunceble/)
+- [PlanetScale](https://planetscale.com/)
+- [Node.js](https://nodejs.org)
+- [ExpressJS](https://expressjs.com/)
+- [NGINX](https://www.nginx.com/)
 
 #### Phisherman also makes use of the following websites and API's:
 
