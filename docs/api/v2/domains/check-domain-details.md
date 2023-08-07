@@ -84,7 +84,16 @@ print(data.decode("utf-8"))
 
 What you get back from the API.
 
-### Regular Domains
+### Response codes
+
+| Code  | Description                                                                                                                    |
+| :---- | :----------------------------------------------------------------------------------------------------------------------------- |
+| `200` | Domain was found. JSON data is returned in response. (See below for full response)                                             |
+| `400` | Invalid domain. Domain sent did not pass validation.                                                                           |
+| `404` | Domain was not found.                                                                                                          |
+| `500` | An error occurred getting the domain details from the database. This doesn't necessarily mean the domain was or was not found. |
+
+### Example Responses
 
 ::: code-group
 
@@ -123,47 +132,7 @@ What you get back from the API.
 }
 ```
 
-```json [HTTP 400]
-{
-	"success": false,
-	"message": {
-		"error": {
-			"issues": [
-				{
-					"code": "custom",
-					"message": "'invalid-domain..com' is not a valid domain.",
-					"path": []
-				}
-			],
-			"name": "ZodError"
-		}
-	}
-}
-```
-
-```json [HTTP 404]
-{
-	"success": false,
-	"message": "Not found",
-	"data": {}
-}
-```
-
-```json [HTTP 500]
-{
-	"success": false,
-	"message": "An error occurred getting the domain details from the database.",
-	"data": {}
-}
-```
-
-:::
-
-### Protected Domains
-
-::: code-group
-
-```json [HTTP 200]
+```json [HTTP 200 (Safe Domains)]
 {
 	"success": true,
 	"message": "",

@@ -48,10 +48,10 @@ https://api.phisherman.gg/v2/detections
 }
 ```
 
-| Name    | Type     | Required                        | Description                                            |
-| ------- | -------- | ------------------------------- | ------------------------------------------------------ |
-| `url`   | _string_ | ![Yes](/images/green-check.png) | The full url of the phish that triggered the detection |
-| `guild` | _string_ | ![No](/images/red-cross.png)    | The ID of the guild where this detection was triggered |
+| Name    | Type     | Required | Description                                            |
+| ------- | -------- | -------- | ------------------------------------------------------ |
+| `url`   | _string_ | ✅ Yes   | The full url of the phish that triggered the detection |
+| `guild` | _string_ | ❌ No    | The ID of the guild where this detection was triggered |
 
 ### Examples
 

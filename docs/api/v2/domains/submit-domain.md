@@ -37,10 +37,10 @@ All the data needs to be sent in the request body.
 
 ### Request parameters
 
-| Name            | Type     | Optional | Description                                              |
+| Name            | Type     | Required | Description                                              |
 | :-------------- | :------- | :------- | :------------------------------------------------------- |
-| `domain`        | _string_ | No       | The fully qualified domain name you wish to submit.      |
-| `targetedBrand` | _string_ | No       | The ID of the brand or company this phish is targetting. |
+| `domain`        | _string_ | ✅ Yes   | The fully qualified domain name you wish to submit.      |
+| `targetedBrand` | _string_ | ✅ Yes   | The ID of the brand or company this phish is targetting. |
 
 ### Example JSON payload
 
