@@ -4,13 +4,13 @@ description: Checks the supplied domain against our database and returns the det
 
 # Check Domain Details <Badge type="tip" text="GET" />
 
+Checks the supplied domain against our database and returns the details we have.
+
 ::: warning
 v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
 
 **Update**: The v2 API is being rewritten from scratch. Any previous v2 API documentation will be obsolete.
 :::
-
-Checks the supplied domain against our database and returns the details we have.
 
 ## Request
 
@@ -39,6 +39,8 @@ https://api.phisherman.gg/v2/domains/<domain>/details
 
 `<domain>` is to be replaced with the domain you want to check.
 
+Example: `https://api.phisherman.gg/v2/domains/gimme-ur-money.scam/details`
+
 ### Examples
 
 ::: code-group
@@ -50,7 +52,7 @@ curl -L -X GET "https://api.phisherman.gg/v2/domains/internetbadguys.com/details
 
 ```
 
-```js [Javascript]
+```js [JavaScript]
 const response = await fetch("https://api.phisherman.gg/v2/domains/internetbadguys.com/details", {
 	headers: {
 		"Content-Type": "application/json",
@@ -93,7 +95,7 @@ What you get back from the API.
 | `404` | Domain was not found.                                                                                                          |
 | `500` | An error occurred getting the domain details from the database. This doesn't necessarily mean the domain was or was not found. |
 
-### Example Responses
+### Example responses
 
 ::: code-group
 

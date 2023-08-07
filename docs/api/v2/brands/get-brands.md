@@ -6,7 +6,7 @@ description: Returns a list of brands and their IDs from our database.
 
 Returns a list of brands and their IDs from our database.
 
-Brand ID's are required when [submitting a domain](/api/v2/domains/submit-domain)
+Brand IDs are required when [submitting a domain](/api/v2/domains/submit-domain).
 
 ::: warning
 v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
@@ -48,7 +48,7 @@ curl -L -X GET "https://api.phisherman.gg/v2/brands" \
 
 ```
 
-```js [Javascript]
+```js [JavaScript]
 const response = await fetch("https://api.phisherman.gg/v2/brands", {
 	headers: {
 		"Content-Type": "application/json",

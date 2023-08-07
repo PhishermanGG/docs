@@ -9,23 +9,26 @@ To request access, please join our [Discord server](https://discord.gg/QwrpmTgvW
 ![ModMail](/images/modmail.png)
 
 ::: danger ⛔ **The following will not be eligible for access to Phisherman:**
+
 - iOS, Google Play Store or Kindle apps
 - College or University projects/assignments
 - Private bots for testing or development purposes only
-:::
+  :::
 
 ## Endpoints
 
 The API is accessed by making HTTPS requests to a specific version endpoint URL, in which GET, POST and PUT methods dictate how your interact with the endpoint.
 
-The base URL's for all endpoints are listed below.
+The base URLs for all endpoints are listed below.
 
-### API v1  <Badge type="tip" text="stable" />
+### API v1 <Badge type="tip" text="stable" />
+
 ```
 https://api.phisherman.gg/v1/
 ```
 
-### API v2  <Badge type="warning" text="beta" />
+### API v2 <Badge type="warning" text="beta" />
+
 ```
 https://api.phisherman.gg/v2/
 ```

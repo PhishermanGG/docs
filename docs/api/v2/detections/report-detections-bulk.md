@@ -2,19 +2,19 @@
 description: Used to submit a new phish to Phisherman. Note that all reports are reviewed manually before any new domains are added to Phisherman.
 ---
 
-::: warning
-v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
-:::
-
 # Bulk Report Detections <Badge type="warning" text="POST" />
 
 For public bots that serve a large number of guilds, Phisherman offers a bulk reporting endpoint to help reduce the number of API calls made.
 
+::: warning
+v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
+
+**Update**: The v2 API is being rewritten from scratch. Any previous v2 API documentation will be obsolete.
+:::
+
 ::: tip
 Reporting detections is entirely optional and not required for normal usage, though it does helps us with our analytics and allows you to see how many phish you have stopped.
 :::
-
-## Request
 
 ## Request
 
@@ -91,7 +91,7 @@ curl -L -X POST "https://api.phisherman.gg/v2/detections/bulk" \
 
 ```
 
-```js [Javascript]
+```js [JavaScript]
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 myHeaders.append("Authorization", "Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh");

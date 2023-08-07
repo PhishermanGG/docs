@@ -63,7 +63,7 @@ curl -L -X POST "https://api.phisherman.gg/v2/phish/report" \
 
 ```
 
-```js [Javascript]
+```js [JavaScript]
 var myHeaders = new Headers();
 myHeaders.append("Content-Type", "application/json");
 myHeaders.append("Authorization", "Bearer <API-KEY>");

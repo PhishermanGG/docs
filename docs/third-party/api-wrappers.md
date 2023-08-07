@@ -6,7 +6,7 @@ Phisherman has a number of community developed and maintained API wrappers:
 
 - [phisherman-api](https://github.com/benny-discord/phisherman)
 
-### Javascript
+### JavaScript
 
 - [phisherman.js](https://www.npmjs.com/package/phisherman.js)
 - [phisherman.gg](https://www.npmjs.com/package/phisherman.gg)

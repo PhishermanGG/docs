@@ -23,7 +23,7 @@ Phisherman is built with :heart: (and :coffee:) using:
 - [ExpressJS](https://expressjs.com/)
 - [NGINX](https://www.nginx.com/)
 
-#### Phisherman also makes use of the following websites and API's:
+#### Phisherman also makes use of the following websites and APIs:
 
 - [PhishTank](https://www.phishtank.com/)
 - [URLScan.io](https://urlscan.io/)

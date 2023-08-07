@@ -1,12 +1,12 @@
 # Testing your integration
 
-In order for you to validate your Phisherman integration is working, we provide a selection of URL's you can use for functional testing, these will trigger as a real phish would.
+In order for you to validate your Phisherman integration is working, we provide a selection of URLs you can use for functional testing, these will trigger as a real phish would.
 
 ::: warning NOTE
-Please use only the URL's listed below for testing and not live/known phishing sites
+Please use only the URLs listed below for testing and not live/known phishing sites
 :::
 
-The following URL's can be used for testing:
+The following URLs can be used for testing:
 
 | URL                                     | Status                                 |
 | --------------------------------------- | -------------------------------------- |

@@ -31,7 +31,11 @@ Provide your API key in the Authorization header when making requests.
 
 :::
 
-The URL for this endpoint is: `https://api.phisherman.gg/v2/domains/<domain>`
+The URL for this endpoint is:
+
+```
+https://api.phisherman.gg/v2/domains/<domain>
+```
 
 `<domain>` is to be replaced with the domain you want to check.
 
@@ -48,7 +52,7 @@ curl -L -X GET "https://api.phisherman.gg/v2/domains/suspicious.test.phisherman.
 
 ```
 
-```js [Javascript]
+```js [JavaScript]
 const response = await fetch("https://api.phisherman.gg/v2/domains/suspicious.test.phisherman.gg", {
 	headers: {
 		"Content-Type": "application/json",

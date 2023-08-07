@@ -31,7 +31,11 @@ Provide your API key in the Authorization header when making requests.
 
 :::
 
-The URL for this endpoint is: `https://api.phisherman.gg/v2/domains`
+The URL for this endpoint is:
+
+```
+https://api.phisherman.gg/v2/domains
+```
 
 All the data needs to be sent in the request body.
 
@@ -51,9 +55,9 @@ All the data needs to be sent in the request body.
 }
 ```
 
-### Accepted Brands
+### Accepted brands
 
-A list of accepted brand ID's for `targetedBrand` can be found on the [Brands](/api/v2/brands/get-brands) page.
+A list of accepted brand IDs for `targetedBrand` can be found on the [Brands](/api/v2/brands/get-brands) page.
 
 ### Example requests
 
@@ -82,6 +86,15 @@ const data = response.ok ? await response.json() : "Domain was not submitted.";
 ## Response
 
 What you get back from the API.
+
+### Response codes
+
+| Code  | Description                                          |
+| :---- | :--------------------------------------------------- |
+| `201` | Domain was added to the database.                    |
+| `400` | Request body does not match the allowed schema.      |
+| `403` | Domain is marked as safe and cannot be submitted.    |
+| `500` | An error occurred adding the domain to the database. |
 
 ### Example responses
 
