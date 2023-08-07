@@ -21,18 +21,18 @@ The API is accessed by making HTTPS requests to a specific version endpoint URL,
 
 The base URLs for all endpoints are listed below.
 
-### API v1 <Badge type="tip" text="stable" />
+### API v1 <Badge type="warning" text="deprecated" />
 
 ```
 https://api.phisherman.gg/v1/
 ```
 
-### API v2 <Badge type="warning" text="beta" />
+::: warning NOTE
+API v1 is now deprecated and will soon be sunset. We recommend migrating to the [v2 API](/api/v2/introduction) as soon as possible.
+:::
+
+### API v2 <Badge type="tip" text="stable" />
 
 ```
 https://api.phisherman.gg/v2/
 ```
-
-::: warning
-v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
-:::

@@ -1,4 +1,4 @@
-# Phisherman API v2 <Badge type="tip" text="STABLE" />
+# Phisherman API v1 <Badge type="warning" text="DEPRECATED" />
 
 Interact with the Phisherman's service via the Phisherman API.
 
@@ -6,11 +6,16 @@ Using the Phisherman API requires authentication so that we know who is making r
 
 If you do not have access to the dashboard, please see our [Getting Started](/guide/getting-started.md) page
 
+::: warning NOTE
+API v1 is now deprecated and will soon be sunset. We recommend migrating to the [v2 API](/api/v2/introduction) as soon as possible.
+:::
+
 ## API Base URL
 
 ```
-https://api.phisherman.gg/v2/
+https://api.phisherman.gg/v1/
 ```
+
 
 ## Requests
 
@@ -32,7 +37,7 @@ Some API endpoints require additional permissions to be enabled for your account
 
 ### Rate Limit
 
-The Phisherman API rate limits requests in order to prevent abuse and overload of our services. All users can make up to **30 requests per 10 seconds** to our API.
+The Phisherman API rate limits requests in order to prevent abuse and overload of our services. All users can make up to **15 requests per 10 seconds** to our API.
 
 ::: warning **NOTE**
 Exceeding these limits will automatically block subsequent requests for a limited time. Repeated or continual breeches of these limits may result in your API key being revoked.

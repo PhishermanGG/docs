@@ -112,7 +112,6 @@ Report A Phish response
 
 ```json [HTTP201]
 {
-	"success": true,
 	"message": "",
 	"data": {}
 }
@@ -120,7 +119,6 @@ Report A Phish response
 
 ```json [HTTP400]
 {
-	"success": false,
 	"message": <ERROR-MESSAGE>,
 	"data": {}
 }

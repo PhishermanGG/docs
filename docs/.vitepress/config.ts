@@ -30,6 +30,22 @@ export default defineConfig({
 				text: "API",
 				items: [
 					{
+						text: "v1",
+						collapsed: true,
+						items: [
+							{ text: "Introduction", link: "/api/v1/introduction" },
+							{
+								text: "Domains",
+								collapsed: true,
+								items: [
+									{ text: "Check A Domain", link: "/api/v1/domains/check-domain" },
+									{ text: "Get Domain Details", link: "/api/v1/domains/check-domain-details" },
+								],
+							},
+							{ text: "Report A Detection", link: "/api/v1/report-detection" },
+						],
+					},
+					{
 						text: "v2",
 						collapsed: true,
 						items: [

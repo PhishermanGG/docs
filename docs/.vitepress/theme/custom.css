@@ -1,0 +1,7 @@
+/* .vitepress/theme/custom.css */
+
+:root {
+	--vp-badge-blue-border: var(--vp-c-red-dark);
+	--vp-badge-blue-text: var(--vp-c-red);
+	--vp-badge-blue-bg: var(--vp-c-red-dimm-1);
+}

@@ -86,8 +86,6 @@ What you get back from the API.
 
 ```json [HTTP 200]
 {
-	"success": true,
-	"message": "",
 	"data": [
 		{
 			"id": "AMAZON",
@@ -112,7 +110,6 @@ What you get back from the API.
 
 ```json [HTTP 404]
 {
-	"success": false,
 	"message": "Not found",
 	"data": {}
 }
@@ -120,7 +117,6 @@ What you get back from the API.
 
 ```json [HTTP 500]
 {
-	"success": false,
 	"message": "An error occurred getting brands from the database.",
 	"data": {}
 }

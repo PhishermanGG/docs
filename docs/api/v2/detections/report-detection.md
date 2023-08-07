@@ -119,7 +119,7 @@ Report A Detection response
 
 ::: code-group
 
-```json [HTTP201]
+```json [HTTP 201]
 {
 	"data": {
 		"id": "cf70a2e3-b913-4801-8499-9b09dd6ece78",
@@ -130,9 +130,15 @@ Report A Detection response
 }
 ```
 
-```json [HTTP400]
+```json [HTTP 400]
 {
-	"success": false,
+	"message": <ERROR-MESSAGE>,
+	"data": {}
+}
+```
+
+```json [HTTP 500]
+{
 	"message": <ERROR-MESSAGE>,
 	"data": {}
 }

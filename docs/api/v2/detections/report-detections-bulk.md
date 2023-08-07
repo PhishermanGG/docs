@@ -163,14 +163,22 @@ Report A Detection response
 
 ::: code-group
 
-```json [HTTP204]
+```json [HTTP 204]
 // No Content
 ```
 
-```json [HTTP400]
+```json [HTTP 400]
 {
-	"success": false,
 	"message": <ERROR-MESSAGE>,
 	"data": {}
 }
 ```
+
+```json [HTTP 500]
+{
+	"message": <ERROR-MESSAGE>,
+	"data": {}
+}
+```
+
+:::

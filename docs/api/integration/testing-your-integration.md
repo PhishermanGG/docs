@@ -30,7 +30,6 @@ Body:
 
 ```json
 {
-	"success": true,
 	"message": "",
 	"data": {
 		"url": "https://suspicious.test.phisherman.gg",
@@ -54,7 +53,6 @@ Body:
 
 ```json
 {
-	"success": true,
 	"message": "",
 	"data": {
 		"url": "https://verified.test.phisherman.gg",
@@ -78,7 +76,6 @@ Body:
 
 ```json
 {
-	"success": false,
 	"message": "not found",
 	"data": {}
 }
