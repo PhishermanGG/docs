@@ -52,7 +52,7 @@ Examples can be found below.
 
 ::: danger **Rejected Report:**
 ```
-❌ Phish report <SUBMITTED-URL> approved
+❌ Phish report <SUBMITTED-URL> rejected
 ```
 :::
 Where `<SUBMITTED-URL>` displays the link you submitted.
