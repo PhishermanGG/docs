@@ -6,12 +6,6 @@ description: Submits a new domain to the Phisherman database.
 
 Submits a new domain to the Phisherman database.
 
-::: warning
-v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
-
-**Update**: The v2 API is being rewritten from scratch. Any previous v2 API documentation will be obsolete.
-:::
-
 ## Request
 
 What you send to the API.

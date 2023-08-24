@@ -19,6 +19,7 @@ Phisherman is built with :heart: (and :coffee:) using:
 - [Cloudflare Workers](https://workers.cloudflare.com/)
 - [Cloudflare Workers KV](https://www.cloudflare.com/products/workers-kv/)
 - [PlanetScale](https://planetscale.com/)
+- [Railway](https://railway.app?referralCode=8L2Iwj)
 - [Node.js](https://nodejs.org)
 - [ExpressJS](https://expressjs.com/)
 - [NGINX](https://www.nginx.com/)

@@ -6,12 +6,6 @@ description: Used to submit a new phish to Phisherman. Note that all reports are
 
 Used to report back to Phisherman when your bot triggeres a detection for a domain or URL in the Phisherman database.
 
-::: warning
-v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
-
-**Update**: The v2 API is being rewritten from scratch. Any previous v2 API documentation will be obsolete.
-:::
-
 ::: tip
 Reporting detections is entirely optional and not required for normal usage, though it does helps us with our analytics and allows you to see how many phish you have stopped.
 :::
@@ -133,13 +127,11 @@ Report A Detection response
 ```json [HTTP 400]
 {
 	"message": <ERROR-MESSAGE>,
-	"data": {}
 }
 ```
 
 ```json [HTTP 500]
 {
 	"message": <ERROR-MESSAGE>,
-	"data": {}
 }
 ```

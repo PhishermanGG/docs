@@ -54,7 +54,7 @@ https://api.phisherman.gg/v2/phish
 ::: code-group
 
 ```sh [CURL]
-curl -L -X GET "https://api.phisherman.gg/v2/phish" \
+curl -L -X POST "https://api.phisherman.gg/v2/phish" \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer <API-KEY>"
 --data-raw "{
@@ -73,7 +73,7 @@ var raw = JSON.stringify({
 });
 
 var requestOptions = {
-	method: "GET",
+	method: "POST",
 	headers: myHeaders,
 	body: raw,
 	redirect: "follow",
@@ -96,7 +96,7 @@ headers = {
 	'Content-Type': 'application/json',
 	'Authorization': 'Bearer <API-KEY>'
 }
-conn.request("GET", "/v2/phish", payload, headers)
+conn.request("POST", "/v2/phish", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))
@@ -114,19 +114,18 @@ What you get back from the API.
 
 ```json [HTTP 200]
 {
-	"success": true,
-	"message": "",
 	"data": {
 		"url": "https://internetbadguys.com/",
+		"domain": "internetbadguys.com",
 		"classification": "suspicious",
-		"verifiedPhish": false
+		"verifiedPhish": false,
+		"wasRedirected": false
 	}
 }
 ```
 
 ```json [HTTP 400]
 {
-	"success": false,
 	"message": {
 		"error": {
 			"issues": [
@@ -143,16 +142,12 @@ What you get back from the API.
 ```
 
 ```json [HTTP 404]
-{
-	"message": "Not found",
-	"data": {}
-}
+{}
 ```
 
 ```json [HTTP 500]
 {
-	"message": "An error occurred getting the details from the database.",
-	"data": {}
+	"message": "An error occurred getting the details from the database."
 }
 ```
 
@@ -164,11 +159,12 @@ What you get back from the API.
 
 ```json [HTTP 200]
 {
-	"message": "",
 	"data": {
-		"domain": "<domain>",
+		"url": <url>,
+		"domain": <domain>,
 		"classification": "safe",
-		"verifiedPhish": false
+		"verifiedPhish": false,
+		"wasRedirected": false
 	}
 }
 ```
@@ -191,16 +187,12 @@ What you get back from the API.
 ```
 
 ```json [HTTP 404]
-{
-	"message": "Not found",
-	"data": {}
-}
+{}
 ```
 
 ```json [HTTP 500]
 {
-	"message": "An error occurred getting the domain details from the database.",
-	"data": {}
+	"message": "An error occurred getting the domain details from the database."
 }
 ```
 

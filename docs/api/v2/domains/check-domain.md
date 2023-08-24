@@ -6,12 +6,6 @@ description: Checks the supplied domain against our database.
 
 Checks the supplied domain against our database.
 
-::: warning
-v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
-
-**Update**: The v2 API is being rewritten from scratch. Any previous v2 API documentation will be obsolete.
-:::
-
 ## Request
 
 What you send to the API.
@@ -99,7 +93,6 @@ What you get back from the API.
 
 ```json [HTTP 200]
 {
-	"message": "",
 	"data": {
 		"domain": "suspicious.test.phisherman.gg",
 		"classification": "suspicious",
@@ -110,7 +103,6 @@ What you get back from the API.
 
 ```json [HTTP 200 (Safe Domains)]
 {
-	"message": "",
 	"data": {
 		"domain": "<domain>",
 		"classification": "safe",
@@ -139,14 +131,12 @@ What you get back from the API.
 ```json [HTTP 404]
 {
 	"message": "Not found",
-	"data": {}
 }
 ```
 
 ```json [HTTP 500]
 {
 	"message": "An error occurred getting the domain details from the database.",
-	"data": {}
 }
 ```
 

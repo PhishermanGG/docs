@@ -18,7 +18,7 @@ Requests must be sent over HTTPS with any payload formatted in JSON.
 
 ### Authentication
 
-All API endpoints require authemtication. Provide your bearer token in the [Authorization Bearer Token Header](https://tools.ietf.org/html/rfc6750#section-2.1) when making requests.
+All API endpoints require authentication. Provide your bearer token in the [Authorization Bearer Token Header](https://tools.ietf.org/html/rfc6750#section-2.1) when making requests.
 
 **Example**
 

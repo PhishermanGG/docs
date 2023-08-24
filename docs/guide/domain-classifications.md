@@ -1,6 +1,6 @@
 # Domain Classifications
 
-Phisherman operates a "traffic light" system to classifiy domains.
+Phisherman operates a "traffic light" system to classify domains.
 
 These are returned when using the [check a domain](/api/v2/domains/check-domain) or [check domain details](/api/v2/domains/check-domain-details) endpoints. A description of their meanings is listed below.
 

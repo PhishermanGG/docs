@@ -6,10 +6,6 @@ description: Used to submit a new phish to Phisherman. Note that all reports are
 
 Used to submit a new phish to Phisherman.
 
-::: warning
-v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
-:::
-
 ::: info NOTE
 All reports are reviewed manually before any new domains are added to Phisherman.
 :::
