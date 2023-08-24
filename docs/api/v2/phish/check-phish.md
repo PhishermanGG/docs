@@ -6,10 +6,6 @@ description: Checks the supplied URL against our database.
 
 Checks the supplied URL against our database.
 
-::: warning
-v2 API is still in beta, there may be breaking changes at any time. It is recommended you keep updated with the [#v2-api-beta](https://discord.com/channels/878130674844979210/904090622208663632) channel in Discord for updates and announcements.
-:::
-
 ::: tip TIP
 This is the recommended endpoint for Discord bots to use as it supports passing the full URL without needed to parse the domain name first.
 :::
