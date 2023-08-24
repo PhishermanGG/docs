@@ -30,7 +30,7 @@ Provide your API key in the Authorization header when making requests.
 The URL for this endpoint is:
 
 ```
-https://api.phisherman.gg/v2/phish
+https://api.phisherman.gg/v2/phish/check
 ```
 
 ### Body
