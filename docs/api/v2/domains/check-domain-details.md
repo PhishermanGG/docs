@@ -99,28 +99,30 @@ What you get back from the API.
 		"domain": "internetbadguys.com",
 		"classification": "malicious",
 		"verifiedPhish": true,
-		"targetedBrand": "Discord Inc.",
-		"screenshot": "https://phisherman.gg/domain/screenshot/public/UUID",
-		"created": "2022-01-15T16:34:42.000Z",
-		"network": {
-			"ip": "45.142.122.189",
-			"asn": {
-				"id": "210644",
-				"name": "AEZA-AS"
+		"details": {
+			"targetedBrand": "Discord Inc.",
+			"screenshot": "https://phisherman.gg/domain/screenshot/public/UUID",
+			"created": "2022-01-15T16:34:42.000Z",
+			"network": {
+				"ip": "45.142.122.189",
+				"asn": {
+					"id": "210644",
+					"name": "AEZA-AS"
+				},
+				"country": {
+					"code": "NL",
+					"name": "Netherlands"
+				}
 			},
-			"country": {
-				"code": "NL",
-				"name": "Netherlands"
+			"detections": {
+				"total": 1701,
+				"first": "2022-01-15T21:26:31.000Z",
+				"last": "2022-01-24T07:09:56.000Z"
+			},
+			"links": {
+				"phishtank": "https://phishtank.org/phish_detail.php?phish_id=ID",
+				"urlscan": "https://urlscan.io/result/ID"
 			}
-		},
-		"detections": {
-			"total": 1701,
-			"first": "2022-01-15T21:26:31.000Z",
-			"last": "2022-01-24T07:09:56.000Z"
-		},
-		"links": {
-			"phishtank": "https://phishtank.org/phish_detail.php?phish_id=ID",
-			"urlscan": "https://urlscan.io/result/ID"
 		}
 	}
 }
