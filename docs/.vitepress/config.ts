@@ -63,8 +63,7 @@ export default defineConfig({
 								text: "Phish",
 								collapsed: true,
 								items: [
-									{ text: "Check Phish", link: "/api/v2/phish/check-phish" },
-									{ text: "Report New Phish", link: "/api/v2/phish/report-phish" },
+									{ text: "Check A Phish", link: "/api/v2/phish/check-phish" }
 								],
 							},
 							{

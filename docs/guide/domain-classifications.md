@@ -13,11 +13,7 @@ Site has not been observed serving phishing or scam content, but is high probabi
 :::
 
 ::: danger Malicious
-Site has been observed serving phishing or scam content
-:::
-
-::: info Unknown
-Phisherman has no information regarding this domain
+Site has been observed serving phishing or scam content.
 :::
 
 ## Verified Phish
