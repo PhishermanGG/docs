@@ -15,15 +15,14 @@ Phisherman ingests from multiple sources in order to provide the best possible c
 Phisherman is built with :heart: (and :coffee:) using:
 
 - [Node.js](https://nodejs.org)
-- [MySQL](https://www.mysql.com/)
 - [ExpressJS](https://expressjs.com/)
-- [NGINX](https://www.nginx.com/)
+- [PlanetScale](https://planetscale.com/?from=phisherman)
 - [Cloudflare Workers](https://workers.cloudflare.com/)
 - [Cloudflare Workers KV](https://www.cloudflare.com/products/workers-kv/)
-- [CertStream](https://certstream.calidog.io/)
-- [PyFunceble](https://github.com/PyFunceble/)
+- [Cloudflare Images](https://www.cloudflare.com/developer-platform/cloudflare-images/)
 
 #### Phisherman also makes use of the following websites and API's:
 
 - [PhishTank](https://www.phishtank.com/)
-- [URLScan.io](https://urlscan.io/)
+- [URLScan.io](https://urlscan.io/?from=phisherman)
+- [FishFish](https://fishfish.gg/?from=phisherman)
