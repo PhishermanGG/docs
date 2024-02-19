@@ -10,7 +10,7 @@ Due to the number of phishing domains being created on a daily basis, having to 
 
 ## What sources do you use?
 
-Phisherman ingests from multiple sources in order to provide the best possible coverage of phishing domains. Currently we automatically ingest from the 'phish' API (a Discord community driven initiative), [PhishTank](https://phishtank.org/) as well as manual submissions via the Phisherman discord server and API functions.
+Phisherman ingests from multiple sources in order to provide the best possible coverage of phishing domains. Currently we automatically ingest from the 'FishFish' API (a Discord community driven initiative), [PhishTank](https://phishtank.org/) as well as manual submissions via the Phisherman discord server and API functions.
 
 ## What tech stack do you use?
 Phisherman is built with :heart: (and :coffee:) using:
@@ -18,8 +18,8 @@ Phisherman is built with :heart: (and :coffee:) using:
 - [Node.js](https://nodejs.org)
 - [ExpressJS](https://expressjs.com/)
 - [PlanetScale](https://planetscale.com/?from=phisherman)
-- [Cloudflare Workers](https://workers.cloudflare.com/)
-- [Cloudflare Workers KV](https://www.cloudflare.com/products/workers-kv/)
+- [Cloudflare Workers](https://workers.cloudflare.com/?from=phisherman)
+- [Cloudflare Workers KV](https://www.cloudflare.com/products/workers-kv/?from=phisherman)
 - [Cloudflare Images](https://www.cloudflare.com/developer-platform/cloudflare-images/)
 
 #### Phisherman also makes use of the following websites and API's:

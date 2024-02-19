@@ -1,4 +1,4 @@
-# Phisherman API v2 <Badge type="tip" text="STABLE" />
+# Phisherman API v2 <Badge type="warning" text="beta" />
 
 Interact with the Phisherman's service via the Phisherman API.
 

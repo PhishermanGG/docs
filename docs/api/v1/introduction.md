@@ -1,14 +1,10 @@
-# Phisherman API v1 <Badge type="warning" text="DEPRECATED" />
+# Phisherman API v1 <Badge type="tip" text="stable" />
 
 Interact with the Phisherman's service via the Phisherman API.
 
 Using the Phisherman API requires authentication so that we know who is making requests, what permissions you have and how many requests you are making.
 
 If you do not have access to the dashboard, please see our [Getting Started](/guide/getting-started.md) page
-
-::: warning NOTE
-API v1 is now deprecated and will soon be sunset. We recommend migrating to the [v2 API](/api/v2/introduction) as soon as possible.
-:::
 
 ## API Base URL
 

@@ -6,10 +6,6 @@ description: Checks the supplied domain against our database and returns the det
 
 Checks the supplied domain against our database and returns the details we have.
 
-::: warning NOTE
-API v1 is now deprecated and will soon be sunset. We recommend migrating to the [v2 API](/api/v2/domains/check-domain-details) version of this endpoint as soon as possible.
-:::
-
 ## Request
 
 What you send to the API.
@@ -84,74 +80,70 @@ print(data.decode("utf-8"))
 
 What you get back from the API.
 
-### Response codes
-
-| Code  | Description                                                                                                                    |
-| :---- | :----------------------------------------------------------------------------------------------------------------------------- |
-| `200` | Domain was found. JSON data is returned in response. (See below for full response)                                             |
-| `400` | Invalid domain. Domain sent did not pass validation.                                                                           |
-| `404` | Domain was not found.                                                                                                          |
-| `500` | An error occurred getting the domain details from the database. This doesn't necessarily mean the domain was or was not found. |
-
 ### Example responses
 
 ::: code-group
 
 ```json [HTTP 200]
 {
-	"internetbadguys.com": {
-		"status": "ONLINE",
-		"created": "2021-10-31T14:39:24.000Z",
-		"updated": "2021-12-31T00:00:00.000Z",
-		"lastChecked": "2021-10-31T14:39:29.000Z",
-		"verifiedPhish": false,
-		"classification": "suspicious",
-		"firstSeen": "2021-11-26T01:14:42.000Z",
-		"lastSeen": "2021-12-27T16:40:15.000Z",
-		"targetedBrand": "Other",
-		"phishCaught": 6,
-		"details": {
-			"phishTankId": "",
-			"urlScanId": "50c3429b-ee4d-452c-bad9-b4d5faaaffac",
-			"websiteScreenshot": "https://urlscan.io/screenshots/50c3429b-ee4d-452c-bad9-b4d5faaaffac.png",
-			"ip_address": "146.112.255.155",
-			"asn": {
-				"asn": "AS36692",
-				"asn_name": "OPENDNS",
-				"route": "146.112.255.0/24"
-			},
-			"registry": "arin",
-			"country": {
-				"code": "US",
-				"name": "United States"
-			}
-		}
-	}
+    "internetbadguys.com": {
+        "status": "ONLINE",
+        "created": "2021-10-31T14:39:24.000Z",
+        "updated": "2023-11-20T22:44:26.000Z",
+        "lastChecked": "2021-10-31T14:39:29.000Z",
+        "verifiedPhish": false,
+        "classification": "unknown",
+        "firstSeen": "2021-11-26 01:14:42",
+        "lastSeen": "2021-12-27 16:40:15",
+        "targetedBrand": "Other",
+        "phishCaught": 6,
+        "registry": "arin",
+        "details": {
+            "urlScanId": "50c3429b-ee4d-452c-bad9-b4d5faaaffac",
+            "websiteScreenshot": "https://urlscan.io/screenshots/50c3429b-ee4d-452c-bad9-b4d5faaaffac.png",
+            "ip_address": "146.112.255.155",
+            "asn": {
+                "asn": "AS36692",
+                "asn_name": "OPENDNS",
+                "route": "146.112.255.0/24"
+            },
+            "country": {
+                "code": "US",
+                "name": "United States"
+            }
+        }
+    }
 }
 ```
 
 ```json [HTTP 200 (Safe Domains)]
 {
-	"<domain>": {
-		"classification": "safe",
-		"verifiedPhish": false
-	}
+    "discord.com": {
+        "classification": "safe",
+        "verifiedPhish": false
+    }
 }
 ```
 
 ```json [HTTP 400]
 {
-	"success": false,
-	"message": "invalid request"
+    "message": "Invalid domain.",
+    "error": [
+        {
+            "code": "custom",
+            "message": "'discord..com' is not a valid domain.",
+            "path": []
+        }
+    ]
 }
 ```
 
 ```json [HTTP 404]
 {
-	"<domain>": {
-		"classification": "unknown",
-		"verifiedPhish": false
-	}
+    "discord2.com": {
+        "classification": "unknown",
+        "verifiedPhish": false
+    }
 }
 ```
 

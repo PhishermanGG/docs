@@ -2,16 +2,20 @@
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
+
 hero:
- name: "Phisherman"
- text: "A community driven anti-phishing API"
- actions:
-  - theme: brand
-    text: Go Phishing
-    link: /guide/getting-started
-  - theme: alt
-    text: About
-    link: /guide/introduction
+  name: Phisherman
+  text: A community driven anti-phishing API
+  actions:
+    - theme: brand
+      text: Go Phishing
+      link: /guide/introduction
+    - theme: alt
+      text: GitHub
+      link: https://github.com/PhishermanGG
+  image:
+    src: /images/phisherman-logo-192x192.png
+    alt: Phisherman
 
 features:
  - icon: 💡

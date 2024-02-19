@@ -17,7 +17,7 @@ What you send to the API.
 ::: details Authentication
 
 :lock: **API Key:** Required  
-:key: **API Permission Required:** `API.READ`
+:key: **API Permission Required:** `API.UPDATE`
 
 Provide your API key in the Authorization header when making requests.
 
@@ -32,21 +32,22 @@ Provide your API key in the Authorization header when making requests.
 The URL for this endpoint is:
 
 ```
-https://api.phisherman.gg/v2/detections
+https://api.phisherman.gg/v2/phish/caught/<domain>
 ```
+`<domain>` is to be replaced with the domain you want to check.
+
+Example: `https://api.phisherman.gg/v2/phish/caught/gimme-ur-money.scam`
 
 ### Body
 
 ```json
 {
-	"url": "https://internetbadguys.com",
 	"guild": "878130674844979210"
 }
 ```
 
 | Name    | Type     | Required | Description                                            |
 | ------- | -------- | -------- | ------------------------------------------------------ |
-| `url`   | _string_ | ✅ Yes   | The full url of the phish that triggered the detection |
 | `guild` | _string_ | ❌ No    | The ID of the guild where this detection was triggered |
 
 ### Examples
@@ -54,55 +55,55 @@ https://api.phisherman.gg/v2/detections
 ::: code-group
 
 ```sh [CURL]
-curl -L -X POST "https://api.phisherman.gg/v2/detections" \
--H "Authorization: Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh"
+curl -L -X POST "https://api.phisherman.gg/v2/phish/caught/suspicious.test.phisherman.gg" \
+-H "Authorization: Bearer <API-KEY>" \
 -H "Content-Type: application/json" \
 --data-raw "{
-    \"url\": "https://internetbadguys.com"
-	 \"guild\": "878130674844979210"
+    \"guild\": 878130674844979210
 }"
 
 ```
 
 ```js [JavaScript]
 var myHeaders = new Headers();
+myHeaders.append("Authorization", "Bearer <API-KEY>");
 myHeaders.append("Content-Type", "application/json");
-myHeaders.append("Authorization", "Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh");
 
 var raw = JSON.stringify({
-	url: "https://internetbadguys.com/",
-	guild: "878130674844979210",
+  "guild": 878130674844979200
 });
 
 var requestOptions = {
-	method: "POST",
-	headers: myHeaders,
-	body: raw,
-	redirect: "follow",
+  method: 'POST',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
 };
 
-fetch("https://api.phisherman.gg/v2/detections", requestOptions)
-	.then(response => response.text())
-	.then(result => console.log(result))
-	.catch(error => console.log("error", error));
+fetch("https://api.phisherman.gg/v2/phish/caught/suspicious.test.phisherman.gg", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
+
 ```
 
 ```py [Python]
 import http.client
+import json
 
 conn = http.client.HTTPSConnection("api.phisherman.gg")
 payload = json.dumps({
-  "url": "https://internetbadguys.com/",
-  "guild": "878130674844979210"
+  "guild": 878130674844979200
 })
 headers = {
-	'Content-Type': 'application/json',
-	'Authorization': 'Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh'
+  'Authorization': 'Bearer <API-KEY>',
+  'Content-Type': 'application/json'
 }
-conn.request("POST", "/v2/detections", payload, headers)
+conn.request("POST", "/v2/phish/caught/suspicious.test.phisherman.gg", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))
+
 ```
 
 :::
@@ -115,12 +116,10 @@ Report A Detection response
 
 ```json [HTTP 201]
 {
-	"data": {
-		"id": "cf70a2e3-b913-4801-8499-9b09dd6ece78",
-		"domain": "internetbadguys.com",
-		"url": "https://internetbadguys.com/",
-		"timestamp": "2023-08-07T03:23:29.754Z"
-	}
+    "data": {
+        "id": "e94fcbdd-2308-4336-9ee7-1d36b00a1344",
+        "domain": "suspicious.test.phisherman.gg"
+    }
 }
 ```
 

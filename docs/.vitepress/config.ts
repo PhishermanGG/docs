@@ -60,25 +60,11 @@ export default defineConfig({
 								],
 							},
 							{
-								text: "Phish",
-								collapsed: true,
-								items: [
-									{ text: "Check A Phish", link: "/api/v2/phish/check-phish" }
-								],
-							},
-							{
 								text: "Detections",
 								collapsed: true,
 								items: [
 									{ text: "Report A Detection", link: "/api/v2/detections/report-detection" },
 									{ text: "Bulk Report Detections", link: "/api/v2/detections/report-detections-bulk" },
-								],
-							},
-							{
-								text: "Brands",
-								collapsed: true,
-								items: [
-									{ text: "Get All Brands", link: "/api/v2/brands/get-brands" }
 								],
 							},
 						],
@@ -122,7 +108,7 @@ export default defineConfig({
 		{ icon: "discord", link: "https://discord.gg/QwrpmTgvWy" }],
 
 		footer: {
-			copyright: "Copyright © 2023 phisherman.gg",
+			copyright: "Copyright © 2024 phisherman.gg",
 		},
 	},
 });

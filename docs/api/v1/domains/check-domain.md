@@ -6,10 +6,6 @@ description: Checks the supplied domain against our database.
 
 Checks the supplied domain against our database.
 
-::: warning NOTE
-API v1 is now deprecated and will soon be sunset. We recommend migrating to the [v2 API](/api/v2/domains/check-domain) version of this endpoint as soon as possible.
-:::
-
 ## Request
 
 What you send to the API.

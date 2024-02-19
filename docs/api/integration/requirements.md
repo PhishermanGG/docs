@@ -6,12 +6,12 @@ A) Be a [Verified Bot](https://support.discord.com/hc/en-us/articles/36004072041
 
 **OR**
 
-B) Be a Self-Hosted version of a popular or verified bot (Eg. [Zeppelin](https://zeppelin.gg/))
+B) Be a Self-Hosted version of one of our partner bots (Eg. [Zeppelin](https://zeppelin.gg/))
 
 ::: danger **⛔ The following will not be eligible for access to Phisherman:**
 
 - iOS, Google Play Store or Kindle apps
-- College or University projects/assignments
+- School, College or University projects/assignments
 - Private bots for testing or development purposes only
   :::
 

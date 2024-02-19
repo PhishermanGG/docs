@@ -4,4 +4,9 @@
 	--vp-badge-blue-border: var(--vp-c-red-dark);
 	--vp-badge-blue-text: var(--vp-c-red);
 	--vp-badge-blue-bg: var(--vp-c-red-dimm-1);
+	--vp-c-brand: #5C66F1;
+	--vp-c-brand-light: #7078E6;
+	--vp-c-brand-lighter: #6F79FF;
+	--vp-c-brand-dark: #535CDF;
+	--vp-c-brand-darker: #4850BD;
 }

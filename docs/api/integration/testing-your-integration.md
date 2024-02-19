@@ -11,7 +11,6 @@ The following URLs can be used for testing:
 | URL                                     | Status                                 |
 | --------------------------------------- | -------------------------------------- |
 | `https://suspicious.test.phisherman.gg` | Triggers as a suspicious site          |
-| `https://malicious.test.phisherman.gg`  | Triggers as a malicious site           |
 | `https://verified.test.phisherman.gg`   | Triggers as a verified, malicious site |
 | `https://unknown.test.phisherman.gg`    | Triggers as an unknown site            |
 
@@ -31,37 +30,21 @@ Body:
 
 ```json
 {
-	"data": {
-		"url": "https://suspicious.test.phisherman.gg",
-		"domain": "suspicious.test.phisherman.gg",
-		"classification": "suspicious",
-		"verifiedPhish": false,
-		"wasRedirected": false
-	}
-}
-```
-
-:::
-
-::: details malicious.test.phisherman.gg
-
-HTTP Code:
-
-```
-200
-```
-
-Body:
-
-```json
-{
-	"data": {
-		"url": "https://malicious.test.phisherman.gg",
-		"domain": "malicious.test.phisherman.gg",
-		"classification": "malicious",
-		"verifiedPhish": false,
-		"wasRedirected": false
-	}
+    "suspicious.test.phisherman.gg": {
+        "status": "OFFLINE",
+        "created": "2021-12-29T21:42:29.000Z",
+        "updated": "2023-11-20T22:44:26.000Z",
+        "lastChecked": "2021-12-29T21:42:36.000Z",
+        "verifiedPhish": false,
+        "classification": "SUSPICIOUS",
+        "targetedBrand": "Other",
+        "phishCaught": 0,
+        "details": {
+            "ip_address": null,
+            "asn": {},
+            "country": {}
+        }
+    }
 }
 ```
 
@@ -79,13 +62,21 @@ Body:
 
 ```json
 {
-	"data": {
-		"url": "https://verified.test.phisherman.gg",
-		"domain": "verified.test.phisherman.gg",
-		"classification": "malicious",
-		"verifiedPhish": true,
-		"wasRedirected": false
-	}
+    "verified.test.phisherman.gg": {
+        "status": "OFFLINE",
+        "created": "2021-12-29T21:39:29.000Z",
+        "updated": "2023-11-20T22:44:52.000Z",
+        "lastChecked": "2021-12-29T21:39:37.000Z",
+        "verifiedPhish": true,
+        "classification": "MALICIOUS",
+        "targetedBrand": "Other",
+        "phishCaught": 0,
+        "details": {
+            "ip_address": null,
+            "asn": {},
+            "country": {}
+        }
+    }
 }
 ```
 
@@ -96,14 +87,17 @@ Body:
 HTTP Code:
 
 ```
-404
+200
 ```
 
 Body:
 
 ```json
 {
-	"message": "not found"
+    "unknown.test.phisherman.gg": {
+        "classification": "unknown",
+        "verifiedPhish": false
+    }
 }
 ```
 

@@ -4,7 +4,7 @@ Phisherman operates a "traffic light" system to classify domains.
 
 These are returned when using the [check a domain](/api/v2/domains/check-domain) or [check domain details](/api/v2/domains/check-domain-details) endpoints. A description of their meanings is listed below.
 
-::: tip Genuine
+::: tip Safe
 Site has been verified as being the genuine website for an organisation (Discord, Steam etc.)
 :::
 
@@ -13,7 +13,7 @@ Site has not been observed serving phishing or scam content, but is high probabi
 :::
 
 ::: danger Malicious
-Site has been observed serving phishing or scam content.
+Site has been observed serving malicious content or a scam/phishing site.
 :::
 
 ## Verified Phish
@@ -21,9 +21,9 @@ Site has been observed serving phishing or scam content.
 Phisherman can return either `true` or `false` for the `verifiedPhish` property via the API. A description of what each options means can be found below.
 
 ::: warning False (Default)
-Site has not been has not been reviewed or observed by Phisherman staff as serving malicious content.
+Site has not been has not been reviewed or observed by Phisherman volunteers as serving malicious content.
 :::
 
 ::: danger True
-Site has been observed by Phisherman staff as serving  malicious content.
+Site has been validated by Phisherman volunteers or other sources as as serving malicious content or a scam/phishing site.
 :::

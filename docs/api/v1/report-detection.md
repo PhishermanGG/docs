@@ -2,10 +2,6 @@
 
 When integrating the Phisherman checks with your Discord bot, you can optionally report back when it catches a phish in your server(s).
 
-::: warning NOTE
-API v1 is now deprecated and will soon be sunset. We recommend migrating to the [v2 API](/api/v2/domains/check-domain-details) version of this endpoint as soon as possible.
-:::
-
 ::: tip
 Reporting back caught phish is entirely optional and not required for normal usage, it purely helps us with our analytics
 :::

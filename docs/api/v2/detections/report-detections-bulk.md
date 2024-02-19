@@ -17,7 +17,7 @@ What you send to the API.
 ::: details Authentication
 
 :lock: **API Key:** Required  
-:key: **API Permission Required:** `API.DETECTIONS.BULK`
+:key: **API Permission Required:** `API.UPDATE_BULK`
 
 Provide your API key in the Authorization header when making requests.
 
@@ -32,7 +32,7 @@ Provide your API key in the Authorization header when making requests.
 The URL for this endpoint is:
 
 ```
-https://api.phisherman.gg/v2/detections/bulk
+https://api.phisherman.gg/v2/phish/caught/bulk
 ```
 
 ### Body
@@ -59,7 +59,7 @@ This allows the end user to view the number of Phish they have caught in the [da
 ::: code-group
 
 ```sh [CURL]
-curl -L -X POST "https://api.phisherman.gg/v2/detections/bulk" \
+curl -L -X POST "https://api.phisherman.gg/v2/phish/caught/bulk" \
 -H "Content-Type: application/json" \
 -H "Authorization: Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh" \
 --data-raw "{
@@ -108,7 +108,7 @@ var requestOptions = {
 	redirect: "follow",
 };
 
-fetch("https://api.phisherman.gg/v2/detections/bulk", requestOptions)
+fetch("https://api.phisherman.gg/v2/phish/caught/bulk", requestOptions)
 	.then(response => response.text())
 	.then(result => console.log(result))
 	.catch(error => console.log("error", error));
@@ -143,7 +143,7 @@ headers = {
   'Content-Type': 'application/json',
   'Authorization': 'Bearer 04eff65e-309c-1a2b-cde3-4567f8901gh'
 }
-conn.request("POST", "/v2/detections/bulk", payload, headers)
+conn.request("POST", "/v2/phish/caught/bulk", payload, headers)
 res = conn.getresponse()
 data = res.read()
 print(data.decode("utf-8"))
