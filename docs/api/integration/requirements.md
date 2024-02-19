@@ -1,6 +1,6 @@
 # Requirements
 
-If you are requesting access to Phisherman in order to integrate it with your bot, it should meet one of the following criteria:
+If you are requesting access to Phisherman to integrate it with your bot, it should meet one of the following criteria:
 
 A) Be a [Verified Bot](https://support.discord.com/hc/en-us/articles/360040720412-Bot-Verification-and-Data-Whitelisting)
 
@@ -19,7 +19,7 @@ B) Be a Self-Hosted version of one of our partner bots (Eg. [Zeppelin](https://z
 
 Each end-user will require their own API key, which they can obtain via a request in the Phisherman [Discord server](https://discord.gg/QwrpmTgvWy). This is to allow efficient abuse prevention, rate limiting, and usage tracking.
 
-You will need to provide an option within your users config for them to save their API key. Your bot should then pass this key with each API request.
+You will need to provide an option within your user's config for them to save their API key. Your bot should then pass this key with each API request.
 
 An example request flow should look like the following:
 
@@ -28,5 +28,5 @@ User Config -> API Key -> Your Bot -> Phisherman API -> Your Bot
 ```
 
 :::tip
-An great example of how to set up Phisherman as a plugin can be found in the **[Zeppelin docs](https://zeppelin.gg/docs/plugins/phisherman)**
+A great example of how to set up Phisherman as a plugin can be found in the **[Zeppelin docs](https://zeppelin.gg/docs/plugins/phisherman)**
 :::
