@@ -7,7 +7,7 @@ description: Used to submit a new phish to Phisherman. Note that all reports are
 For public bots that serve a large number of guilds, Phisherman offers a bulk reporting endpoint to help reduce the number of API calls made.
 
 ::: tip
-Reporting detections is entirely optional and not required for normal usage, though it does helps us with our analytics and allows you to see how many phish you have stopped.
+Reporting detections is entirely optional and not required for normal usage, though it does help us with our analytics and allows you to see how many phish you have stopped.
 :::
 
 ## Request
@@ -37,7 +37,7 @@ https://api.phisherman.gg/v2/phish/caught/bulk
 
 ### Body
 
-The JSON payload for this endpoint uses the end-users API key as the object key, followed by the full url of the phish, then an array of timestamps.
+The JSON payload for this endpoint uses the end-user API key as the object key, followed by the full URL of the phish, and then an array of timestamps.
 
 This allows the end user to view the number of Phish they have caught in the [dashboard](https://phisherman.gg/home)
 
