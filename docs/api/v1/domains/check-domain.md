@@ -98,5 +98,5 @@ false
 :::
 
 ::: warning IMPORTANT
-Note that a return of `false` can mean that this domain is not listed in our database and not that the domain is safe. There is always a small window were newly registered phishing domains may not yet have been identified. Always exercise caution when dealing with suspected phishing domains. If in doubt, perform additional verifications such as [VirusTotal](https://www.virustotal.com) or [URLScan.io](https://urlscan.io/) scans.
+Note that a return of `false` can mean that this domain is not listed in our database and not that the domain is safe. There is always a small window where newly registered phishing domains may not yet have been identified. Always exercise caution when dealing with suspected phishing domains. If in doubt, perform additional verifications such as [VirusTotal](https://www.virustotal.com) or [URLScan.io](https://urlscan.io/) scans.
 :::
