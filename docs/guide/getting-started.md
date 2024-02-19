@@ -2,7 +2,7 @@
 
 ## Requesting API access
 
-While Phisherman is still development access is granted on a per-person basis while we work to ensure overall stability, performance and gather user feedback.
+While Phisherman is still in development access is granted on a per-person basis while we work to ensure overall stability, and performance and gather user feedback.
 
 To request access, please join our [Discord server](https://discord.gg/QwrpmTgvWy) and send a direct message to ModMail to request access.
 
@@ -17,7 +17,7 @@ To request access, please join our [Discord server](https://discord.gg/QwrpmTgvW
 
 ## Endpoints
 
-The API is accessed by making HTTPS requests to a specific version endpoint URL, in which GET, POST and PUT methods dictate how your interact with the endpoint.
+The API is accessed by making HTTPS requests to a specific version endpoint URL, in which GET, POST and PUT methods dictate how you interact with the endpoint.
 
 The base URLs for all endpoints are listed below.
 
