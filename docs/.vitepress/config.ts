@@ -1,6 +1,5 @@
 import { defineConfig } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: "Phisherman",
 	description: "A community-driven anti-phishing API",
@@ -9,7 +8,6 @@ export default defineConfig({
 	cleanUrls: true,
 	themeConfig: {
 		logo: "/images/phisherman-logo.png",
-		// https://vitepress.dev/reference/default-theme-config
 		nav: [
 			{ text: "Home", link: "/" },
 			{ text: "Website", link: "https://phisherman.gg/" },
