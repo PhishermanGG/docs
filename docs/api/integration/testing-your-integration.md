@@ -16,7 +16,7 @@ The following URLs can be used for testing:
 
 ## Expected Responses
 
-Below are the expected responses when using the [Check Phish](/api/v2/phish/check-phish) v2 endpoint.
+Below are the expected responses when using the [v2 Check Domain](/api/v2/domains/check-domain) v2 endpoint.
 
 ::: details suspicious.test.phisherman.gg
 
@@ -30,21 +30,8 @@ Body:
 
 ```json
 {
-    "suspicious.test.phisherman.gg": {
-        "status": "OFFLINE",
-        "created": "2021-12-29T21:42:29.000Z",
-        "updated": "2023-11-20T22:44:26.000Z",
-        "lastChecked": "2021-12-29T21:42:36.000Z",
-        "verifiedPhish": false,
-        "classification": "SUSPICIOUS",
-        "targetedBrand": "Other",
-        "phishCaught": 0,
-        "details": {
-            "ip_address": null,
-            "asn": {},
-            "country": {}
-        }
-    }
+    "classification": "suspicious",
+    "verifiedPhish": false
 }
 ```
 
@@ -62,21 +49,8 @@ Body:
 
 ```json
 {
-    "verified.test.phisherman.gg": {
-        "status": "OFFLINE",
-        "created": "2021-12-29T21:39:29.000Z",
-        "updated": "2023-11-20T22:44:52.000Z",
-        "lastChecked": "2021-12-29T21:39:37.000Z",
-        "verifiedPhish": true,
-        "classification": "MALICIOUS",
-        "targetedBrand": "Other",
-        "phishCaught": 0,
-        "details": {
-            "ip_address": null,
-            "asn": {},
-            "country": {}
-        }
-    }
+    "classification": "malicious",
+    "verifiedPhish": true
 }
 ```
 
@@ -94,10 +68,8 @@ Body:
 
 ```json
 {
-    "unknown.test.phisherman.gg": {
-        "classification": "unknown",
-        "verifiedPhish": false
-    }
+    "classification": "unknown",
+    "verifiedPhish": false
 }
 ```
 
