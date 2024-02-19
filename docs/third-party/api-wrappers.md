@@ -1,6 +1,6 @@
 # API Wrappers
 
-Phisherman has a number of community developed and maintained API wrappers:
+Phisherman has a number of community-developed and maintained API wrappers:
 
 ### Golang
 
