@@ -32,10 +32,10 @@ Some API endpoints require additional permissions to be enabled for your account
 
 ### Rate Limit
 
-The Phisherman API rate limits requests in order to prevent abuse and overload of our services. All users can make up to **30 requests per 10 seconds** to our API.
+The Phisherman API rate limits requests to prevent abuse and overload of our services. All users can make up to **30 requests per 10 seconds** to our API.
 
 ::: warning **NOTE**
-Exceeding these limits will automatically block subsequent requests for a limited time. Repeated or continual breeches of these limits may result in your API key being revoked.
+Exceeding these limits will automatically block subsequent requests for a limited time. Repeated or continual breaches of these limits may result in your API key being revoked.
 :::
 
 All applications should make reasonable attempts to avoid making invalid requests. For example:
@@ -43,7 +43,7 @@ All applications should make reasonable attempts to avoid making invalid request
 - **401** responses are avoided by providing a valid token in the authorization header when required and by stopping further requests after a token becomes invalid
 - **403** responses are avoided by inspecting required permissions and by not making requests that are restricted by such permissions
 
-If you have a very large application that may exceed this limit on on a regular or sustained basis, please contact us via ModMail.
+If you have a very large application that may exceed this limit on a regular or sustained basis, please contact us via ModMail.
 
 ## HTTP Response Codes
 
