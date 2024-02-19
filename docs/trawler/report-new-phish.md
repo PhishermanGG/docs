@@ -12,7 +12,7 @@ To report a new phishing site to Phisherman via Trawler, please follow the steps
 
 ![Report Slash Command](/images/trawler-report-slash-command.png)
 
-4. Either hit `ENTER` or left click on the highlighted Trawler `/report` command
+4. Either hit `ENTER` or left-click on the highlighted Trawler `/report` command
 
 5. In the `link` box, enter the *full url* to the phish site you want to report
 
