@@ -165,7 +165,7 @@ What you get back from the API.
 | `websiteScreenshot` | _string_    | URL to a screenshot of this website, provided by either [PhishTank](https://www.phishtank.com/) or [URLScan.io](https://urlscan.io/) |
 | `ip_address`        | _string_    | The IP address of this website                                                                                                       |
 | `asn: asn`          | _string_    | The ASN (Autonomous System Numbers) for this domain                                                                                  |
-| `asn: name`         | _string_    | The human readable name for this ASN (Autonomous System Number)                                                                      |
+| `asn: name`         | _string_    | The human-readable name for this ASN (Autonomous System Number)                                                                      |
 | `asn: route`        | _string_    | The CIDR block for this domain                                                                                                       |
 | `route`             | _string_    | The CIDR Block for this website                                                                                                      |
 | `registry`          | _string_    | The regional internet registry for this domain                                                                                       |
