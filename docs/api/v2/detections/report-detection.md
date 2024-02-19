@@ -4,10 +4,10 @@ description: Used to submit a new phish to Phisherman. Note that all reports are
 
 # Report A Detection <Badge type="warning" text="POST" />
 
-Used to report back to Phisherman when your bot triggeres a detection for a domain or URL in the Phisherman database.
+Used to report back to Phisherman when your bot triggers a detection for a domain or URL in the Phisherman database.
 
 ::: tip
-Reporting detections is entirely optional and not required for normal usage, though it does helps us with our analytics and allows you to see how many phish you have stopped.
+Reporting detections is entirely optional and not required for normal usage, though it does help us with our analytics and allows you to see how many phish you have stopped.
 :::
 
 ## Request
