@@ -1,11 +1,18 @@
 import { defineConfig } from "vitepress";
 
+// https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: "Phisherman",
 	description: "A community-driven anti-phishing API",
 	head: [["link", { rel: "icon", href: "/images/phisherman-logo.png" }]],
 	lastUpdated: true,
 	cleanUrls: true,
+	markdown: {
+		theme: {
+			dark: "material-theme-darker",
+			light: "material-theme-lighter",
+		},
+	},
 	themeConfig: {
 		logo: "/images/phisherman-logo.png",
 		nav: [
@@ -21,7 +28,7 @@ export default defineConfig({
 				items: [
 					{ text: "Introduction", link: "/guide/introduction" },
 					{ text: "Getting Started", link: "/guide/getting-started" },
-					{ text: "Domain Classifications", link: "/guide/domain-classifications" }
+					{ text: "Domain Classifications", link: "/guide/domain-classifications" },
 				],
 			},
 			{
@@ -101,8 +108,10 @@ export default defineConfig({
 			text: "Edit this page on GitHub",
 		},
 
-		socialLinks: [{ icon: "github", link: "https://github.com/PhishermanGG" },
-		{ icon: "discord", link: "https://discord.gg/QwrpmTgvWy" }],
+		socialLinks: [
+			{ icon: "github", link: "https://github.com/PhishermanGG" },
+			{ icon: "discord", link: "https://discord.gg/QwrpmTgvWy" },
+		],
 
 		footer: {
 			copyright: "Copyright © 2024 phisherman.gg",
