@@ -54,7 +54,6 @@ export default defineConfig({
 								items: [
 									{ text: "Check A Domain", link: "/api/v2/domains/check-domain" },
 									{ text: "Get Domain Details", link: "/api/v2/domains/check-domain-details" },
-									{ text: "Submit A Domain", link: "/api/v2/domains/submit-domain" },
 								],
 							},
 							{
