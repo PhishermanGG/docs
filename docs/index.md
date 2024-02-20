@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: Go Phishing
-      link: /guide/introduction
+      link: /guide/getting-started
     - theme: alt
       text: GitHub
       link: https://github.com/PhishermanGG
